@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+title: "Early-life infections and later autism and ADHD: analysis code and aggregate data"
+message: "If you use this code or these data, please cite the paper."
+authors:
+  - family-names: Ssentongo
+    given-names: Anna E.
+    affiliation: Penn State College of Medicine
+  - family-names: Ssentongo
+    given-names: Paddy
+    affiliation: Penn State Health Milton S. Hershey Medical Center
+    email: pssentongo@pennstatehealth.psu.edu
+license: MIT

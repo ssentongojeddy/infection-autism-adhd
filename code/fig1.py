@@ -1,0 +1,23 @@
+import matplotlib; matplotlib.use('Agg'); import matplotlib.pyplot as plt
+from matplotlib.patches import FancyBboxPatch
+plt.rcParams.update({'font.family':'Liberation Sans','font.size':6.7})
+fig,ax=plt.subplots(figsize=(7.2,6.0),dpi=300); ax.set_xlim(0,100); ax.set_ylim(-1,100); ax.axis('off')
+def box(x,y,w,h,t,fc='#f4f6fa',ec='#2a5ea8',b=False,fs=6.7):
+    ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle='round,pad=0.4,rounding_size=1.2',fc=fc,ec=ec,lw=0.9))
+    ax.text(x+w/2,y+h/2,t,ha='center',va='center',fontsize=fs,fontweight='bold' if b else 'normal',linespacing=1.35)
+def arr(x1,y1,x2,y2): ax.annotate('',xy=(x2,y2),xytext=(x1,y1),arrowprops=dict(arrowstyle='-|>',color='#333',lw=0.9,mutation_scale=8))
+box(18,88,64,9,'TriNetX Global Collaborative Network\nDeidentified electronic health records from health care organizations (study 409549)',fc='#e9eef7',b=False)
+box(18,74,64,8,'Infants with ≥1 well-child visit (ICD-10-CM Z00.1) before age 2 years\n(required in both exposed and control cohorts to equalize health care contact)')
+arr(50,88,50,82.4)
+box(2,47,44,22,'Exposed cohorts (22 separate comparisons)\n\nFirst diagnosis of the condition before age 2 y\nIndex date = first diagnosis\n\n• CMV disease (positive-control infection)\n• 20 other infections and noninfectious conditions\n• Diaper dermatitis (benign reference exposure)',fc='#fdf1ec',ec='#c0392b')
+box(54,47,44,22,'Well-child control cohort\n\nWell-child visit before age 2 y\nwith none of the exposure codes in that window\nIndex date = well-child visit\n\n≈2.7–3.2 million eligible infants per comparison',fc='#eef5ef',ec='#1b8a5a')
+arr(40,74,24,69.6); arr(60,74,76,69.6)
+box(8,28,84,14,'1:1 greedy nearest-neighbor propensity score matching (caliper 0.1 pooled SD) on 27 covariates\nDemographics (8) · perinatal and congenital diagnoses (11) · early-childhood conditions (6)\nfamily history of developmental disorders (1) · systemic antibiotic exposure (1)\nMatched pairs per comparison: 1,253 (bacterial meningitis) to 409,413 (diaper dermatitis); CMV, 1,345 pairs')
+arr(24,47,35,42.6); arr(76,47,65,42.6)
+box(5,12.5,90,12,'Follow-up from 1 day to 9 years after index; patients with the outcome before the window excluded\nCox proportional hazards models · Kaplan-Meier · log-rank test · absolute risk per 1,000\nBenjamini-Hochberg FDR across 21 × 7 tests · E-values · calibration against diaper dermatitis · random-effects pooling')
+arr(50,27.8,50,25.1)
+box(1,0,47,10,'Primary outcomes\nAutism spectrum disorder (F84.0, F84.5, F84.8, F84.9)\nADHD (F90)',fc='#fff7e0',ec='#b88400',b=False)
+box(52,0,47,10,'Secondary and falsification outcomes\nSpeech-language disorder · intellectual disability\ncerebral palsy · epilepsy · sensorineural hearing loss\nArm fracture (negative-control outcome)',fc='#fff7e0',ec='#b88400')
+arr(40,12.3,25,10.6); arr(60,12.3,75,10.6)
+for ext in ['png','pdf']: fig.savefig(f'figs/Figure1_study_design.{ext}',dpi=300,bbox_inches='tight')
+fig.savefig('figs/Figure1_study_design.tiff',dpi=300,bbox_inches='tight',pil_kwargs={'compression':'tiff_lzw'})

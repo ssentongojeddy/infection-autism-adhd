@@ -1,0 +1,2364 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{0233}{\ensuremath{\bar{y}}}
+\DeclareUnicodeCharacter{221A}{\ensuremath{\surd}}
+\DeclareUnicodeCharacter{03A3}{\ensuremath{\Sigma}}
+\DeclareUnicodeCharacter{2192}{\ensuremath{\rightarrow}}
+\DeclareUnicodeCharacter{2265}{\ensuremath{\geq}}
+\DeclareUnicodeCharacter{2211}{\ensuremath{\sum}}
+\DeclareUnicodeCharacter{2003}{ }
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+\DeclareUnicodeCharacter{03A6}{\ensuremath{\Phi}}
+\DeclareUnicodeCharacter{2264}{\ensuremath{\leq}}
+\DeclareUnicodeCharacter{2265}{\ensuremath{\geq}}
+\DeclareUnicodeCharacter{00D7}{\ensuremath{\times}}
+\DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}
+\DeclareUnicodeCharacter{03B2}{\ensuremath{\beta}}
+\DeclareUnicodeCharacter{03C4}{\ensuremath{\tau}}
+\DeclareUnicodeCharacter{03C7}{\ensuremath{\chi}}
+\DeclareUnicodeCharacter{0302}{}
+\DeclareUnicodeCharacter{0304}{}
+\DeclareUnicodeCharacter{00B7}{\ensuremath{\cdot}}
+\DeclareUnicodeCharacter{2032}{\ensuremath{'}}
+\usepackage{textcomp}
+\usepackage{graphicx,booktabs,longtable,array,calc,float,xcolor,setspace,ragged2e}\usepackage[expansion=false]{microtype}
+\usepackage[skins]{tcolorbox}
+\usepackage[font=small,labelformat=empty]{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}\usepackage{pdflscape}\graphicspath{{/tmp/claude-0/-home-claude/1e37972c-6107-52a0-86b9-b3cd81bfbeeb/scratchpad/jama/}}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{1.4em}{0.6em}
+\titlespacing*{\subsection}{0pt}{1.1em}{0.4em}
+\setstretch{1.25}
+\setlength{\parskip}{0.35em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\passthrough}[1]{#1}
+\def\real#1{#1}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{0pt}
+\begin{document}
+\begin{center}{\LARGE Supplemental Online Content\par}\vspace{1em}{\large Early-Life Infections and Later Autism and Attention-Deficit/Hyperactivity Disorder\par}\vspace{0.8em}Ssentongo AE, Ssentongo P.\par\vspace{0.4em}2026\end{center}\vspace{1em}\noindent\textit{This supplemental material has been provided by the authors to give readers additional information about their work.}
+
+\section*{Supplement Contents}
+
+\begin{itemize}
+\tightlist
+\item
+  eMethods 1. Data Source and Privacy Protections
+\item
+  eMethods 2. Cohort Construction
+\item
+  eMethods 3. Covariates and Propensity Score Model
+\item
+  eMethods 4. Matching Algorithm
+\item
+  eMethods 5. Outcome Ascertainment and Time-to-Event
+  Analysis
+\item
+  eMethods 6. Derived Statistics: P Values, False Discovery
+  Rate, Absolute Risks, Calibration, Pooling, and E-Values
+\item
+  eMethods 7. Sensitivity Analyses and Deviations From the
+  Analysis Plan
+\item
+  eTable 1. Exposure Definitions, Cohort Sizes, and Matched
+  Pairs
+\item
+  eTable 2. Propensity Score Covariates and Codes
+\item
+  eTable 3. Outcome Definitions and Codes
+\item
+  eTable 4. Full Results for All Conditions and Outcomes
+\item
+  eTable 5. Hazard Ratios Calibrated Against Diaper
+  Dermatitis
+\item
+  eTable 6. Random-Effects Pooled Hazard Ratios by Condition
+  Group
+\item
+  eTable 7. Sensitivity Analysis Without the Well-Child
+  Requirement in Exposed Infants
+\item
+  eTable 8. E-Values for Statistically Significant Positive
+  Associations
+\item
+  eTable 9. Complete Baseline Characteristics for the CMV
+  Comparison
+\item
+  eTable 10. Same-Era Sensitivity Analysis for COVID-19
+\item
+  eFigure 1. Calibrated Hazard Ratios for Autism and ADHD
+\item
+  eFigure 2. Absolute Risk Differences per 1,000 Children
+\item
+  eFigure 3. Primary vs Unrestricted Design
+\item
+  eFigure 4. E-Values
+\item
+  eReferences
+\end{itemize}
+
+\newpage
+
+\hypertarget{emethods-1.-data-source-and-privacy-protections}{%
+\section*{eMethods 1. Data Source and Privacy
+Protections}\label{emethods-1.-data-source-and-privacy-protections}}
+
+TriNetX is a federated health research network that links
+deidentified electronic health record (EHR) data from
+participating health care organizations (HCOs), mostly
+academic medical centers and their affiliated hospitals and
+clinics in the US.\textsuperscript{1} Data include
+demographics, diagnoses coded in the \emph{International
+Classification of Diseases, Tenth Revision, Clinical
+Modification} (ICD-10-CM), procedures, medications mapped to
+the Anatomical Therapeutic Chemical (ATC) classification and
+RxNorm, and laboratory results. Queries are run in real time
+on each HCO's data; only aggregate counts and model results
+are returned to the investigator. TriNetX rounds any count
+of 1 to 10 to 10, and it restricts analysis of selected
+codes considered sensitive (here, congenital cytomegalovirus
+{[}P35.1{]}, neonatal bacterial sepsis {[}P36{]}, and
+neonatal jaundice {[}P59{]}). The analyses used the Global
+Collaborative Network in study 409549; all analyses were run
+in October 2026. The number of contributing HCOs varies by
+query and over time. At the time of the final queries
+(October 26, 2026), 188 of 193 network HCOs were online,
+covering about 211 million patients; 150 HCOs contributed
+infants to the well-child source population, 94\% of whom
+were seen at US-based HCOs.
+
+\hypertarget{emethods-2.-cohort-construction}{%
+\section*{eMethods 2. Cohort
+Construction}\label{emethods-2.-cohort-construction}}
+
+\textbf{Source population.} Infants with at least 1 newborn,
+infant, or child health examination (ICD-10-CM Z00.1)
+recorded at age 0-1 year in completed years, that is, before
+the second birthday (TriNetX age-at-event range 0-1).
+
+\textbf{Exposure cohorts (22).} For each condition, the
+cohort query required (1) at least 1 diagnosis code for the
+condition (eTable 1) recorded at age 0-1 year (before age 2
+years) and (2) Z00.1 recorded at age 0-1 year. The index
+event was the first occurrence of the condition code only;
+Z00.1 could occur before or after the index date within the
+age window. Twenty-two cohort queries were built (W00-W23,
+omitting the 2 restricted neonatal conditions).
+
+\textbf{Control cohorts.} For each comparison, the control
+query required Z00.1 at age 0-1 year and excluded any of
+that comparison's exposure codes at age 0-1 year. The index
+event was the Z00.1 visit. Because each control query
+excludes only the codes of its own comparison, controls in
+one comparison may carry other conditions (for example, a
+control in the RSV comparison may have had influenza). This
+mirrors the target question for each condition: risk
+compared with infants in routine care who did not have that
+condition.
+
+\textbf{Why the well-child requirement.} Controls entered
+through a routine visit and were therefore in routine care
+by definition. Exposed infants identified only by a
+sick-visit diagnosis include infants who received most of
+their care elsewhere or only in acute settings. Such infants
+have fewer recorded developmental assessments, which lowers
+recorded rates of conditions such as ADHD and
+speech-language disorder, and they include sicker infants
+seen in hospitals, which raises recorded rates of severe
+outcomes. Requiring Z00.1 in both groups aligns the
+opportunity for detection. The unrestricted design is
+reported as a sensitivity analysis (eTable 7; eFigure 3).
+
+\hypertarget{emethods-3.-covariates-and-propensity-score-model}{%
+\section*{eMethods 3. Covariates and Propensity Score
+Model}\label{emethods-3.-covariates-and-propensity-score-model}}
+
+Twenty-seven covariates were prespecified (eTable 2): 8
+demographic variables (current age, age at index, male sex,
+Hispanic or Latino ethnicity, not Hispanic or Latino
+ethnicity, White race, Black or African American race, Asian
+race), 11 perinatal and congenital diagnosis groups, 6
+early-childhood diagnosis groups, 1 family-history code, and
+1 medication class. Covariates were assessed in a window
+from any time before through the index date. Diagnosis and
+medication covariates were coded as binary indicators
+(present at least once in the window vs not). Age variables
+were continuous. Female sex and unknown or other race and
+ethnicity categories were omitted as reference categories.
+
+The original plan included 30 covariates. TriNetX limits the
+computational size of the matching step (approximately the
+product of the combined cohort size and the number of
+covariates; about 100 million). Because several comparisons
+exceeded this limit with 30 covariates, 3 covariates with
+the weakest expected confounding role were removed for all
+comparisons: feeding problems of newborn (P92),
+gastroesophageal reflux disease (K21), and family history of
+disabling chronic disease (Z82). Their balance after
+matching is shown for the CMV comparison (Table 1 and eTable
+9).
+
+The propensity score for infant \emph{i} was estimated as
+
+logit Pr(\emph{E\textsubscript{i}} = 1 \textbar{}
+\textbf{\emph{X}}\emph{\textsubscript{i}}) =
+β\textsubscript{0} +
+β′\textbf{\emph{X}}\emph{\textsubscript{i}},
+
+where \emph{E\textsubscript{i}} indicates membership in the
+exposure cohort and
+\textbf{\emph{X}}\emph{\textsubscript{i}} is the vector of
+the 27 covariates, entered as main effects without
+interactions or splines. The model was fitted by maximum
+likelihood by the TriNetX platform (Python scikit-learn
+logistic regression implementation).
+
+\hypertarget{emethods-4.-matching-algorithm}{%
+\section*{eMethods 4. Matching
+Algorithm}\label{emethods-4.-matching-algorithm}}
+
+Matching used 1:1 greedy nearest-neighbor matching without
+replacement on the propensity score, with a caliper of 0.1
+pooled SDs of the propensity score. TriNetX randomizes the
+order of records before matching to avoid bias from the
+order of rows in the data. An exposed infant was discarded
+if no control fell within the caliper. Balance was
+summarized with the absolute standardized mean difference
+(SMD):
+
+for a binary covariate, SMD =
+\textbar{}\emph{p}\textsubscript{1} −
+\emph{p}\textsubscript{2}\textbar{} /
+√\{{[}\emph{p}\textsubscript{1}(1 −
+\emph{p}\textsubscript{1}) + \emph{p}\textsubscript{2}(1 −
+\emph{p}\textsubscript{2}){]} / 2\};
+
+for a continuous covariate, SMD =
+\textbar{}\emph{x̄}\textsubscript{1} −
+\emph{x̄}\textsubscript{2}\textbar{} /
+√{[}(\emph{s}\textsubscript{1}\textsuperscript{2} +
+\emph{s}\textsubscript{2}\textsuperscript{2}) / 2{]}.
+
+SMD values below 0.10 were taken to indicate adequate
+balance. The SMDs in Table 1 and eTable 9 were recalculated
+by the authors from the TriNetX baseline counts; cells
+reported by TriNetX as 10 (true value 1-10) make the
+corresponding SMDs approximate.
+
+Matching was performed once per comparison. For each
+outcome, infants with that outcome on or before the index
+date were then excluded from both matched groups; matched
+pairs were not re-formed, which is why at-risk numbers
+differ slightly between groups and outcomes (eTable 4).
+
+\hypertarget{emethods-5.-outcome-ascertainment-and-time-to-event-analysis}{%
+\section*{eMethods 5. Outcome Ascertainment and Time-to-Event
+Analysis}\label{emethods-5.-outcome-ascertainment-and-time-to-event-analysis}}
+
+Outcomes were identified by the first ICD-10-CM code in the
+follow-up window from 1 day to 3,285 days (9 years) after
+the index date (eTable 3). Starting follow-up on day 1
+excludes diagnoses recorded at the index encounter. Infants
+were censored at their last recorded fact in the EHR or at
+the end of the window, whichever came first.
+
+Within each matched cohort, the hazard ratio (HR) was
+estimated by a Cox proportional hazards model with exposure
+group as the only covariate:
+
+\emph{h}(\emph{t} \textbar{} \emph{E}) =
+\emph{h}\textsubscript{0}(\emph{t}) exp(β\emph{E}), HR =
+exp(β̂),
+
+with 95\% CIs from the model-based standard error. Because
+confounding was addressed by matching, no further covariates
+were added, and matched pairs were not modeled as strata,
+which yields a slightly conservative variance. Kaplan-Meier
+survival functions were estimated for each group and
+compared by the log-rank test. TriNetX also reports a test
+of proportional hazards based on scaled Schoenfeld
+residuals; these were not extracted for all 173 estimable
+models, so HRs are interpreted as weighted averages of the
+hazard ratio over follow-up.
+
+\hypertarget{emethods-6.-derived-statistics}{%
+\section*{eMethods 6. Derived
+Statistics}\label{emethods-6.-derived-statistics}}
+
+All derived statistics were computed by the authors in
+Python 3.13 with SciPy from the TriNetX outputs (numbers at
+risk, numbers of events, HR, and 95\% CI).
+
+\textbf{Standard errors and P values.} For each HR with 95\%
+CI (\emph{L}, \emph{U}), SE(ln HR) = (ln \emph{U} − ln
+\emph{L})/(2 × 1.96), \emph{z} = ln HR / SE, and the 2-sided
+\emph{P} = 2{[}1 − Φ(\textbar{}\emph{z}\textbar){]}, where Φ
+is the standard normal distribution function.
+
+\textbf{Absolute risks.} Cumulative risk per 1,000 children
+= 1,000 × events / number at risk, computed for each group;
+the risk difference (RD) is exposed minus control. These are
+crude proportions over the follow-up window and do not
+account for censoring; Kaplan-Meier estimates would be
+somewhat higher.
+
+\textbf{False discovery rate.} The Benjamini-Hochberg
+procedure\textsuperscript{2} was applied to the family of
+144 tests formed by 21 conditions (excluding the reference
+exposure) × 7 outcomes (excluding the negative-control
+outcome), less 3 tests that could not be estimated because
+of suppressed counts. With ordered \emph{P} values
+\emph{P}\textsubscript{(1)} ≤ \ldots{} ≤
+\emph{P}\textsubscript{(m)}, \emph{q}\textsubscript{(i)} =
+min\textsubscript{j≥i} \{\emph{m P}\textsubscript{(j)} /
+\emph{j}\}, capped at 1.
+
+\textbf{Calibration against the reference exposure.} For
+condition \emph{c} and outcome \emph{o}, ln
+HR\textsuperscript{cal}\textsubscript{c,o} = ln
+HR\textsubscript{c,o} − ln HR\textsubscript{ref,o} and
+SE\textsuperscript{cal} = √{[}SE(ln
+HR\textsubscript{c,o})\textsuperscript{2} + SE(ln
+HR\textsubscript{ref,o})\textsuperscript{2}{]}, where
+\emph{ref} is diaper dermatitis. The 95\% CI is exp(ln
+HR\textsuperscript{cal} ± 1.96 SE\textsuperscript{cal}). The
+variance treats the 2 estimates as independent. Because the
+2 comparisons share part of their control pool, the true
+covariance is positive, so the true variance is smaller and
+the reported CIs are conservative.
+
+\textbf{Random-effects pooling.} Within each condition group
+with at least 2 conditions, log HRs
+\emph{y\textsubscript{j}} with within-study variances
+\emph{v\textsubscript{j}} were pooled by the
+DerSimonian-Laird method: fixed-effect weights
+\emph{w\textsubscript{j}} = 1/\emph{v\textsubscript{j}},
+Cochran \emph{Q} =
+Σ\emph{w\textsubscript{j}}(\emph{y\textsubscript{j}} −
+\emph{ȳ}\textsubscript{FE})\textsuperscript{2},
+τ\textsuperscript{2} = max\{0, (\emph{Q} −
+\emph{df})/{[}Σ\emph{w\textsubscript{j}} −
+Σ\emph{w\textsubscript{j}}\textsuperscript{2}/Σ\emph{w\textsubscript{j}}{]}\},
+random-effects weights \emph{w\textsubscript{j}}* =
+1/(\emph{v\textsubscript{j}} + τ\textsuperscript{2}), and
+pooled ln HR =
+Σ\emph{w\textsubscript{j}}*\emph{y\textsubscript{j}} /
+Σ\emph{w\textsubscript{j}}* with SE =
+(Σ\emph{w\textsubscript{j}}*)\textsuperscript{−1/2}.
+Heterogeneity was summarized by \emph{I}\textsuperscript{2}
+= max\{0, (\emph{Q} − \emph{df})/\emph{Q}\}. Pooled
+estimates describe the average association within a group of
+related conditions; they do not imply that the conditions
+are interchangeable, and high \emph{I}\textsuperscript{2}
+values (eTable 6) indicate that individual estimates (eTable
+4) should be preferred.
+
+\textbf{E-values.} For an HR treated as an approximate risk
+ratio \emph{RR} (reasonable because the outcomes are
+uncommon), E-value = \emph{RR} + √{[}\emph{RR}(\emph{RR} −
+1){]} for \emph{RR} ≥ 1 (with \emph{RR} replaced by
+1/\emph{RR} when \emph{RR} \textless{}
+1).\textsuperscript{3} The E-value for the CI uses the limit
+closest to 1 and equals 1 if the CI includes 1.
+
+\hypertarget{emethods-7.-sensitivity-analyses-and-deviations-from-the-analysis-plan}{%
+\section*{eMethods 7. Sensitivity Analyses and Deviations
+From the Analysis
+Plan}\label{emethods-7.-sensitivity-analyses-and-deviations-from-the-analysis-plan}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Unrestricted design.} Eighteen comparisons were
+  also run without the Z00.1 requirement in the exposure
+  cohort (controls unchanged). Bacterial meningitis, viral
+  meningitis or encephalitis, and HSV infection used 30
+  covariates in this analysis; the others used the 27
+  covariates. Unrestricted analyses for febrile seizure,
+  atopic dermatitis, and iron-deficiency anemia were not
+  completed.
+\item
+  \textbf{Earlier CMV analysis.} A separate CMV analysis
+  (B25 at age 0-1 year vs well-child controls without B25)
+  was matched on 9 covariates (age at index, current age,
+  sex, race, ethnicity, P07, Q20-Q28, D80-D89, Q90-Q99),
+  yielding 5,147 pairs.
+\item
+  \textbf{Restricted codes and congenital CMV overlap.}
+  Congenital CMV (P35.1), neonatal sepsis (P36), and
+  neonatal jaundice (P59) were planned exposures but cannot
+  define analysis cohorts in TriNetX. P35.1 can, however, be
+  counted. Of 1,387 infants meeting the CMV exposure
+  definition (B25 and Z00.1 before age 2 years), 635
+  (45.8\%) also carried P35.1 (60 HCOs). Conversely, 1,492
+  infants had P35.1 and a well-child visit before age 2
+  years, of whom 635 (42.6\%) also had B25 and were
+  therefore in the CMV cohort. The CMV cohort is thus a
+  mixture of coded congenital CMV and CMV disease without a
+  congenital code (postnatal infection or uncoded congenital
+  infection).
+\item
+  \textbf{Negative-control outcome for bone infection.} Arm
+  fracture is not a valid negative control for osteomyelitis
+  or septic arthritis, because bone infection is linked to
+  imaging, bone pathology, and coding of fractures.
+\item
+  \textbf{Same-era (calendar-time) analysis.} COVID-19
+  (U07.1) can occur only from 2020 onward, whereas controls
+  in the primary analysis were indexed across the full data
+  period. The COVID-19 comparison was therefore repeated
+  with both the exposure and control queries restricted to
+  children with a current age of 0-6 years (born from late
+  2019 onward), so that all well-child visits and index
+  dates before age 2 years fell in the pandemic era. Because
+  TriNetX does not offer an absolute calendar-date filter on
+  cohort criteria, the current-age filter was used as the
+  era restriction. The diaper dermatitis comparison was
+  repeated with the same restriction to provide a same-era
+  reference for calibration. All other settings (27
+  covariates, matching, outcomes, and window) were
+  unchanged. In both runs, TriNetX reported that 1 or more
+  HCOs did not return results. Results are in eTable 10.
+\end{enumerate}
+
+\begin{landscape}\scriptsize
+
+\hypertarget{etable-1.-exposure-definitions-cohort-sizes-and-matched-pairs}{%
+\section*{eTable 1. Exposure Definitions, Cohort Sizes, and
+Matched
+Pairs}\label{etable-1.-exposure-definitions-cohort-sizes-and-matched-pairs}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2672}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2672}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1724}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0690}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0690}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0862}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0690}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Group
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Condition
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+ICD-10-CM codes
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Infants with code before age 1 y, No.~\textsuperscript{a}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+With well-child visit, No.~\textsuperscript{b}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Eligible controls, No.
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Matched pairs, No.
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Congenital/perinatal viral & CMV disease & B25 & 5,518 &
+1,387 & 3,228,691 & 1,345 \\
+Invasive CNS & Bacterial meningitis & G00 & 8,738 & 1,348 &
+3,242,202 & 1,253 \\
+Invasive CNS & Viral meningitis/encephalitis & A87, A86 &
+11,166 & 1,859 & 3,241,670 & 1,685 \\
+Invasive systemic & Sepsis (postneonatal) & A40, A41 &
+68,893 & 10,654 & 3,232,794 & 9,667 \\
+Invasive systemic & Osteomyelitis/septic arthritis & M86,
+M00 & 9,492 & 1,381 & 3,242,163 & 1,262 \\
+Invasive systemic & UTI/pyelonephritis & N39.0, N10 &
+291,815 & 60,499 & 3,182,668 & 57,349 \\
+Respiratory & RSV infection & J21.0, J12.1, B97.4 & 534,279
+& 166,721 & 3,076,829 & 149,865 \\
+Respiratory & Influenza & J09-J11 & 364,318 & 142,086 &
+3,100,869 & 127,676 \\
+Respiratory & COVID-19 & U07.1 & 254,511 & 95,708 &
+3,147,123 & 94,108 \\
+Respiratory & Pneumonia & J13, J15, J18 & 464,136 & 119,589
+& 3,123,318 & 101,444 \\
+Respiratory & Pertussis & A37 & 16,062 & 3,354 & 3,240,167 &
+3,033 \\
+Mucocutaneous/enteric/exanthem & HSV infection & B00 &
+44,754 & 13,795 & 3,229,641 & 12,702 \\
+Mucocutaneous/enteric/exanthem & Enterovirus infection &
+B34.1, B97.1 & 135,422 & 40,698 & 3,201,085 & 39,922 \\
+Mucocutaneous/enteric/exanthem & Viral gastroenteritis & A08
+& 312,768 & 124,821 & 3,117,695 & 112,443 \\
+Mucocutaneous/enteric/exanthem & Roseola & B08.2 & 45,130 &
+12,410 & 3,231,125 & 12,265 \\
+Mucocutaneous/enteric/exanthem & Varicella & B01 & 29,344 &
+5,954 & 3,237,577 & 4,755 \\
+Mucocutaneous/enteric/exanthem & Hand, foot, and mouth
+disease & B08.4 & 295,982 & 154,545 & 3,085,392 & 132,566 \\
+Noninfectious/inflammatory & Kawasaki disease & M30.3 &
+16,970 & 1,881 & 3,241,658 & 1,825 \\
+Noninfectious/inflammatory & Febrile seizure & R56.0 &
+178,928 & 32,660 & 3,210,890 & 31,563 \\
+Noninfectious/inflammatory & Atopic dermatitis & L20 &
+693,145 & 396,999 & 2,846,557 & 367,367 \\
+Noninfectious/inflammatory & Iron-deficiency anemia & D50 &
+134,714 & 66,097 & 3,177,453 & 62,527 \\
+Benign reference & Diaper dermatitis (reference) & L22 &
+822,224 & 502,903 & 2,740,656 & 409,413 \\
+\end{longtable}
+
+\textsuperscript{a} First code before age 2 years, without
+the well-child requirement (from the cohort query at the
+time of analysis). \textsuperscript{b} Primary exposure
+cohort: code and a well-child visit (Z00.1) before age 2
+years. Planned but not analyzable because TriNetX restricts
+the codes: congenital CMV (P35.1), neonatal sepsis (P36),
+and neonatal jaundice (P59).
+
+\newpage
+
+\hypertarget{etable-2.-propensity-score-covariates-and-codes}{%
+\section*{eTable 2. Propensity Score Covariates and
+Codes}\label{etable-2.-propensity-score-covariates-and-codes}}
+
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1484}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2422}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3047}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3047}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedleft
+No.
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Domain
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Covariate
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Code (ICD-10-CM, HL7/CDC race and ethnicity, or ATC)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & Demographic & Current age (y), continuous & NA \\
+2 & Demographic & Age at index (y), continuous & NA \\
+3 & Demographic & Male sex & Administrative sex M \\
+4 & Demographic & Hispanic or Latino & 2135-2 \\
+5 & Demographic & Not Hispanic or Latino & 2186-5 \\
+6 & Demographic & White & 2106-3 \\
+7 & Demographic & Black or African American & 2054-5 \\
+8 & Demographic & Asian & 2028-9 \\
+9 & Perinatal & Disorders of newborn related to short
+gestation and low birth weight & P07 \\
+10 & Perinatal & Disorders of newborn related to slow fetal
+growth and fetal malnutrition & P05 \\
+11 & Perinatal & Newborn affected by maternal factors and
+complications of pregnancy, labor, and delivery & P00-P04 \\
+12 & Perinatal & Birth trauma & P10-P15 \\
+13 & Perinatal & Respiratory distress of newborn & P22 \\
+14 & Perinatal & Transitory endocrine and metabolic
+disorders specific to newborn & P70-P74 \\
+15 & Perinatal & Other disturbances of cerebral status of
+newborn & P91 \\
+16 & Congenital & Congenital malformations of the nervous
+system & Q00-Q07 \\
+17 & Congenital & Congenital malformations of the
+circulatory system & Q20-Q28 \\
+18 & Congenital & Chromosomal abnormalities, not elsewhere
+classified & Q90-Q99 \\
+19 & Immune & Certain disorders involving the immune
+mechanism & D80-D89 \\
+20 & Early childhood & Lack of expected normal physiological
+development in childhood & R62 \\
+21 & Early childhood & Symptoms and signs concerning food
+and fluid intake & R63 \\
+22 & Early childhood & Acute upper respiratory infections of
+multiple and unspecified sites & J06 \\
+23 & Early childhood & Asthma & J45 \\
+24 & Early childhood & Nonsuppurative otitis media & H65 \\
+25 & Early childhood & Suppurative and unspecified otitis
+media & H66 \\
+26 & Family history & Family history of mental and
+behavioral disorders & Z81 \\
+27 & Medication & Antibacterials for systemic use & ATC
+J01 \\
+NA & \emph{Removed (computational limit)} & Feeding problems
+of newborn; gastroesophageal reflux disease; family history
+of certain disabilities and chronic diseases & P92; K21;
+Z82 \\
+NA & \emph{Not in model; balance reported} & Female sex;
+unknown ethnicity; other, unknown, Native Hawaiian or Other
+Pacific Islander, and American Indian or Alaska Native race;
+cleft lip and palate; musculoskeletal malformations;
+well-child visit & F; UN; 2131-1, UNK, 2076-8, 1002-5;
+Q35-Q37; Q65-Q79; Z00.1 \\
+\end{longtable}
+
+All diagnosis and medication covariates were binary
+indicators assessed at any time before or on the index date.
+Codes ending in a 3-character category (eg, P07) include all
+subcodes.
+
+\newpage
+
+\hypertarget{etable-3.-outcome-definitions-and-codes}{%
+\section*{eTable 3. Outcome Definitions and
+Codes}\label{etable-3.-outcome-definitions-and-codes}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1959}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4021}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4021}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Type
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Outcome
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+ICD-10-CM codes
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Primary & Autism spectrum disorder & F84.0 (autistic
+disorder), F84.5 (Asperger syndrome), F84.8 (other pervasive
+developmental disorders), F84.9 (pervasive developmental
+disorder, unspecified) \\
+Primary & Attention-deficit/hyperactivity disorder & F90
+(all subcodes) \\
+Secondary & Speech-language disorder & F80 (specific
+developmental disorders of speech and language) \\
+Secondary & Intellectual disability & F70-F79 \\
+Secondary & Cerebral palsy & G80 \\
+Secondary & Epilepsy & G40 \\
+Secondary & Sensorineural hearing loss & H90.3, H90.4,
+H90.5 \\
+Negative control & Fracture of shoulder, upper arm, or
+forearm & S42, S52 \\
+\end{longtable}
+
+The follow-up window was 1 to 3,285 days after the index
+date. Children with the outcome on or before the index date
+were excluded from that outcome analysis. F84.2 (Rett
+syndrome), F84.3 (other childhood disintegrative disorder),
+and F84.4 were not included.
+
+\newpage
+
+\hypertarget{etable-4.-full-results-for-all-conditions-and-outcomes}{%
+\section*{eTable 4. Full Results for All Conditions and
+Outcomes}\label{etable-4.-full-results-for-all-conditions-and-outcomes}}
+
+\textbf{Autism spectrum disorder}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.2348}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.1288}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0909}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Condition
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+At risk, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Events, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+At risk, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Events, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Risk/1000, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Risk/1000, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+RD/1000
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+HR (95\% CI)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\emph{P}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+FDR \emph{q}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+E-value (CI)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+CMV disease & 1,344 & 108 & 1,342 & 70 & 80.4 & 52.2 & +28.2
+& 1.45 (1.07-1.96) & .02 & .03 & 2.25 (1.35) \\
+Bacterial meningitis & 1,252 & 81 & 1,253 & 70 & 64.7 & 55.9
+& +8.8 & 1.18 (0.86-1.62) & .32 & .44 & 1.64 (1.00) \\
+Viral meningitis/encephalitis & 1,685 & 64 & 1,683 & 56 &
+38.0 & 33.3 & +4.7 & 1.09 (0.76-1.55) & .65 & .73 & 1.39
+(1.00) \\
+Sepsis (postneonatal) & 9,650 & 586 & 9,661 & 578 & 60.7 &
+59.8 & +0.9 & 0.99 (0.88-1.11) & .85 & .88 & 1.12 (1.00) \\
+Osteomyelitis/septic arthritis & 1,261 & 49 & 1,261 & 57 &
+38.9 & 45.2 & -6.3 & 0.84 (0.57-1.23) & .36 & .48 & 1.68
+(1.00) \\
+UTI/pyelonephritis & 57,322 & 1,701 & 57,323 & 1,642 & 29.7
+& 28.6 & +1.0 & 0.98 (0.92-1.05) & .56 & .65 & 1.16
+(1.00) \\
+RSV infection & 149,804 & 5,072 & 149,770 & 5,359 & 33.9 &
+35.8 & -1.9 & 0.93 (0.90-0.97) & \textless.001 & .001 & 1.35
+(1.21) \\
+Influenza & 127,607 & 4,058 & 127,580 & 4,342 & 31.8 & 34.0
+& -2.2 & 0.91 (0.87-0.95) & \textless.001 & \textless.001 &
+1.43 (1.30) \\
+COVID-19 & 94,038 & 4,099 & 94,032 & 3,168 & 43.6 & 33.7 &
++9.9 & 1.22 (1.16-1.28) & \textless.001 & \textless.001 &
+1.73 (1.60) \\
+Pneumonia & 101,377 & 3,379 & 101,356 & 3,700 & 33.3 & 36.5
+& -3.2 & 0.89 (0.84-0.93) & \textless.001 & \textless.001 &
+1.51 (1.37) \\
+Pertussis & 3,031 & 94 & 3,032 & 117 & 31.0 & 38.6 & -7.6 &
+0.77 (0.58-1.00) & .05 & .09 & 1.94 (1.00) \\
+HSV infection & 12,697 & 408 & 12,681 & 474 & 32.1 & 37.4 &
+-5.2 & 0.82 (0.71-0.93) & .003 & .006 & 1.75 (1.35) \\
+Enterovirus infection & 39,879 & 1,668 & 39,874 & 1,735 &
+41.8 & 43.5 & -1.7 & 0.93 (0.86-0.99) & .03 & .05 & 1.37
+(1.11) \\
+Viral gastroenteritis & 112,365 & 4,587 & 112,360 & 4,233 &
+40.8 & 37.7 & +3.1 & 1.05 (1.00-1.09) & .03 & .06 & 1.27
+(1.06) \\
+Roseola & 12,258 & 340 & 12,257 & 330 & 27.7 & 26.9 & +0.8 &
+0.97 (0.83-1.13) & .67 & .75 & 1.22 (1.00) \\
+Varicella & 4,754 & 146 & 4,751 & 151 & 30.7 & 31.8 & -1.1 &
+0.91 (0.72-1.14) & .41 & .53 & 1.43 (1.00) \\
+Hand, foot, and mouth disease & 132,498 & 3,665 & 132,435 &
+4,624 & 27.7 & 34.9 & -7.3 & 0.77 (0.74-0.80) &
+\textless.001 & \textless.001 & 1.93 (1.80) \\
+Kawasaki disease & 1,825 & 73 & 1,822 & 74 & 40.0 & 40.6 &
+-0.6 & 0.94 (0.68-1.29) & .68 & .75 & 1.34 (1.00) \\
+Febrile seizure & 31,532 & 1,353 & 31,526 & 1,242 & 42.9 &
+39.4 & +3.5 & 1.05 (0.97-1.14) & .21 & .32 & 1.28 (1.00) \\
+Atopic dermatitis & 367,268 & 12,877 & 367,202 & 11,936 &
+35.1 & 32.5 & +2.6 & 1.03 (1.01-1.06) & .01 & .03 & 1.21
+(1.09) \\
+Iron-deficiency anemia & 62,468 & 2,079 & 62,420 & 2,672 &
+33.3 & 42.8 & -9.5 & 0.73 (0.69-0.77) & \textless.001 &
+\textless.001 & 2.08 (1.91) \\
+Diaper dermatitis (reference) & 409,313 & 13,209 & 409,248 &
+11,927 & 32.3 & 29.1 & +3.1 & 1.05 (1.03-1.08) &
+\textless.001 & NA & 1.29 (1.19) \\
+\end{longtable}
+
+\textbf{ADHD}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.2348}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.1288}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0909}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Condition
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+At risk, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Events, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+At risk, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Events, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Risk/1000, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Risk/1000, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+RD/1000
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+HR (95\% CI)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\emph{P}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+FDR \emph{q}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+E-value (CI)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+CMV disease & 1,345 & 77 & 1,345 & 79 & 57.2 & 58.7 & -1.5 &
+0.92 (0.67-1.26) & .60 & .68 & 1.40 (1.00) \\
+Bacterial meningitis & 1,253 & 61 & 1,253 & 71 & 48.7 & 56.7
+& -8.0 & 0.87 (0.62-1.23) & .43 & .53 & 1.56 (1.00) \\
+Viral meningitis/encephalitis & 1,685 & 99 & 1,685 & 104 &
+58.8 & 61.7 & -3.0 & 0.88 (0.67-1.16) & .38 & .50 & 1.52
+(1.00) \\
+Sepsis (postneonatal) & 9,661 & 647 & 9,666 & 594 & 67.0 &
+61.5 & +5.5 & 1.06 (0.95-1.19) & .27 & .39 & 1.32 (1.00) \\
+Osteomyelitis/septic arthritis & 1,262 & 93 & 1,262 & 86 &
+73.7 & 68.1 & +5.5 & 1.05 (0.79-1.41) & .73 & .78 & 1.29
+(1.00) \\
+UTI/pyelonephritis & 57,340 & 2,648 & 57,342 & 2,486 & 46.2
+& 43.4 & +2.8 & 1.01 (0.95-1.06) & .80 & .85 & 1.09
+(1.00) \\
+RSV infection & 149,850 & 7,955 & 149,846 & 7,439 & 53.1 &
+49.6 & +3.4 & 1.10 (1.07-1.14) & \textless.001 &
+\textless.001 & 1.43 (1.33) \\
+Influenza & 127,662 & 6,665 & 127,661 & 6,221 & 52.2 & 48.7
+& +3.5 & 1.05 (1.01-1.08) & .009 & .02 & 1.27 (1.12) \\
+COVID-19 & 94,098 & 2,413 & 94,099 & 1,966 & 25.6 & 20.9 &
++4.8 & 1.45 (1.36-1.54) & \textless.001 & \textless.001 &
+2.25 (2.06) \\
+Pneumonia & 101,430 & 6,980 & 101,425 & 6,437 & 68.8 & 63.5
+& +5.4 & 1.05 (1.02-1.09) & .003 & .007 & 1.29 (1.15) \\
+Pertussis & 3,032 & 204 & 3,033 & 185 & 67.3 & 61.0 & +6.3 &
+1.05 (0.86-1.28) & .66 & .74 & 1.27 (1.00) \\
+HSV infection & 12,699 & 826 & 12,702 & 772 & 65.0 & 60.8 &
++4.3 & 1.01 (0.92-1.11) & .83 & .86 & 1.12 (1.00) \\
+Enterovirus infection & 39,914 & 2,477 & 39,913 & 2,321 &
+62.1 & 58.2 & +3.9 & 1.04 (0.98-1.10) & .22 & .32 & 1.23
+(1.00) \\
+Viral gastroenteritis & 112,427 & 7,827 & 112,430 & 6,282 &
+69.6 & 55.9 & +13.7 & 1.21 (1.17-1.25) & \textless.001 &
+\textless.001 & 1.70 (1.61) \\
+Roseola & 12,264 & 624 & 12,265 & 602 & 50.9 & 49.1 & +1.8 &
+0.97 (0.87-1.08) & .58 & .67 & 1.21 (1.00) \\
+Varicella & 4,755 & 355 & 4,755 & 305 & 74.7 & 64.1 & +10.5
+& 1.08 (0.93-1.26) & .33 & .45 & 1.37 (1.00) \\
+Hand, foot, and mouth disease & 132,543 & 7,872 & 132,543 &
+7,194 & 59.4 & 54.3 & +5.1 & 1.07 (1.04-1.10) &
+\textless.001 & \textless.001 & 1.34 (1.23) \\
+Kawasaki disease & 1,825 & 84 & 1,825 & 108 & 46.0 & 59.2 &
+-13.2 & 0.73 (0.55-0.97) & .03 & .06 & 2.07 (1.19) \\
+Febrile seizure & 31,550 & 2,300 & 31,555 & 1,882 & 72.9 &
+59.6 & +13.3 & 1.18 (1.11-1.25) & \textless.001 &
+\textless.001 & 1.64 (1.46) \\
+Atopic dermatitis & 367,330 & 17,688 & 367,344 & 16,017 &
+48.2 & 43.6 & +4.6 & 1.06 (1.04-1.08) & \textless.001 &
+\textless.001 & 1.31 (1.23) \\
+Iron-deficiency anemia & 62,515 & 3,033 & 62,514 & 3,195 &
+48.5 & 51.1 & -2.6 & 0.88 (0.84-0.93) & \textless.001 &
+\textless.001 & 1.53 (1.38) \\
+Diaper dermatitis (reference) & 409,379 & 25,163 & 409,386 &
+17,888 & 61.5 & 43.7 & +17.8 & 1.36 (1.33-1.39) &
+\textless.001 & NA & 2.06 (2.00) \\
+\end{longtable}
+
+\textbf{Speech-language disorder}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.2348}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.1288}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0909}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Condition
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+At risk, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Events, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+At risk, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Events, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Risk/1000, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Risk/1000, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+RD/1000
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+HR (95\% CI)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\emph{P}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+FDR \emph{q}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+E-value (CI)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+CMV disease & 1,315 & 433 & 1,331 & 343 & 329.3 & 257.7 &
++71.6 & 1.25 (1.08-1.44) & .002 & .005 & 1.80 (1.38) \\
+Bacterial meningitis & 1,237 & 358 & 1,245 & 265 & 289.4 &
+212.9 & +76.6 & 1.43 (1.22-1.68) & \textless.001 &
+\textless.001 & 2.21 (1.74) \\
+Viral meningitis/encephalitis & 1,674 & 312 & 1,677 & 314 &
+186.4 & 187.2 & -0.9 & 0.94 (0.81-1.10) & .46 & .56 & 1.31
+(1.00) \\
+Sepsis (postneonatal) & 9,463 & 2,513 & 9,464 & 2,233 &
+265.6 & 235.9 & +29.6 & 1.12 (1.06-1.19) & \textless.001 &
+\textless.001 & 1.49 (1.31) \\
+Osteomyelitis/septic arthritis & 1,230 & 246 & 1,228 & 227 &
+200.0 & 184.9 & +15.1 & 1.07 (0.90-1.29) & .43 & .53 & 1.36
+(1.00) \\
+UTI/pyelonephritis & 56,726 & 8,627 & 56,624 & 8,367 & 152.1
+& 147.8 & +4.3 & 0.98 (0.95-1.01) & .21 & .32 & 1.16
+(1.00) \\
+RSV infection & 147,814 & 26,064 & 147,160 & 24,896 & 176.3
+& 169.2 & +7.2 & 1.02 (1.00-1.04) & .02 & .05 & 1.16
+(1.06) \\
+Influenza & 125,229 & 20,368 & 124,363 & 19,329 & 162.6 &
+155.4 & +7.2 & 1.03 (1.01-1.05) & .005 & .01 & 1.20
+(1.10) \\
+COVID-19 & 92,256 & 19,089 & 91,995 & 14,912 & 206.9 & 162.1
+& +44.8 & 1.20 (1.18-1.23) & \textless.001 & \textless.001 &
+1.70 (1.63) \\
+Pneumonia & 99,196 & 16,670 & 98,812 & 16,316 & 168.1 &
+165.1 & +2.9 & 0.99 (0.97-1.01) & .58 & .66 & 1.08 (1.00) \\
+Pertussis & 2,997 & 507 & 2,988 & 500 & 169.2 & 167.3 & +1.8
+& 0.98 (0.87-1.11) & .81 & .85 & 1.14 (1.00) \\
+HSV infection & 12,334 & 2,042 & 12,247 & 1,910 & 165.6 &
+156.0 & +9.6 & 1.04 (0.98-1.10) & .24 & .34 & 1.24 (1.00) \\
+Enterovirus infection & 38,797 & 7,988 & 38,553 & 7,305 &
+205.9 & 189.5 & +16.4 & 1.06 (1.02-1.09) & \textless.001 &
+.001 & 1.31 (1.19) \\
+Viral gastroenteritis & 109,868 & 21,546 & 109,360 & 18,381
+& 196.1 & 168.1 & +28.0 & 1.16 (1.14-1.19) & \textless.001 &
+\textless.001 & 1.60 (1.54) \\
+Roseola & 12,114 & 1,603 & 12,033 & 1,688 & 132.3 & 140.3 &
+-8.0 & 0.89 (0.83-0.96) & .001 & .003 & 1.49 (1.27) \\
+Varicella & 4,713 & 686 & 4,646 & 674 & 145.6 & 145.1 & +0.5
+& 0.96 (0.86-1.07) & .46 & .56 & 1.25 (1.00) \\
+Hand, foot, and mouth disease & 129,145 & 19,723 & 128,271 &
+19,938 & 152.7 & 155.4 & -2.7 & 0.96 (0.94-0.98) &
+\textless.001 & \textless.001 & 1.25 (1.17) \\
+Kawasaki disease & 1,785 & 276 & 1,782 & 289 & 154.6 & 162.2
+& -7.6 & 0.90 (0.76-1.06) & .19 & .29 & 1.48 (1.00) \\
+Febrile seizure & 30,457 & 5,906 & 30,280 & 4,946 & 193.9 &
+163.3 & +30.6 & 1.19 (1.14-1.23) & \textless.001 &
+\textless.001 & 1.66 (1.54) \\
+Atopic dermatitis & 362,915 & 65,730 & 362,687 & 56,259 &
+181.1 & 155.1 & +26.0 & 1.15 (1.13-1.16) & \textless.001 &
+\textless.001 & 1.56 (1.52) \\
+Iron-deficiency anemia & 60,273 & 11,334 & 59,678 & 10,184 &
+188.0 & 170.6 & +17.4 & 1.06 (1.03-1.09) & \textless.001 &
+\textless.001 & 1.32 (1.23) \\
+Diaper dermatitis (reference) & 404,735 & 70,662 & 403,426 &
+57,262 & 174.6 & 141.9 & +32.6 & 1.21 (1.19-1.22) &
+\textless.001 & NA & 1.70 (1.67) \\
+\end{longtable}
+
+\textbf{Intellectual disability}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.2348}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.1288}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0909}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Condition
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+At risk, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Events, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+At risk, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Events, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Risk/1000, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Risk/1000, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+RD/1000
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+HR (95\% CI)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\emph{P}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+FDR \emph{q}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+E-value (CI)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+CMV disease & 1,345 & 48 & 1,342 & 17 & 35.7 & 12.7 & +23.0
+& 2.68 (1.54-4.66) & \textless.001 & .001 & 4.80 (2.45) \\
+Bacterial meningitis & 1,248 & 39 & 1,253 & 19 & 31.2 & 15.2
+& +16.1 & 2.09 (1.21-3.62) & .008 & .02 & 3.60 (1.71) \\
+Viral meningitis/encephalitis & 1,683 & 20 & 1,684 & 11 &
+11.9 & 6.5 & +5.4 & 1.71 (0.82-3.57) & .15 & .24 & 2.81
+(1.00) \\
+Sepsis (postneonatal) & 9,624 & 258 & 9,648 & 206 & 26.8 &
+21.4 & +5.5 & 1.23 (1.02-1.48) & .03 & .05 & 1.76 (1.18) \\
+Osteomyelitis/septic arthritis & NR & NR & NR & NR & & & &
+NR & & & \\
+UTI/pyelonephritis & 57,289 & 528 & 57,311 & 443 & 9.2 & 7.7
+& +1.5 & 1.13 (1.00-1.28) & .05 & .09 & 1.52 (1.00) \\
+RSV infection & 149,813 & 652 & 149,803 & 713 & 4.4 & 4.8 &
+-0.4 & 0.93 (0.83-1.03) & .17 & .26 & 1.37 (1.00) \\
+Influenza & 127,627 & 402 & 127,608 & 568 & 3.1 & 4.5 & -1.3
+& 0.70 (0.61-0.79) & \textless.001 & \textless.001 & 2.23
+(1.84) \\
+COVID-19 & 94,069 & 212 & 94,046 & 299 & 2.3 & 3.2 & -0.9 &
+0.82 (0.68-0.98) & .03 & .06 & 1.74 (1.15) \\
+Pneumonia & 101,358 & 904 & 101,367 & 766 & 8.9 & 7.6 & +1.4
+& 1.15 (1.04-1.26) & .006 & .01 & 1.56 (1.25) \\
+Pertussis & 3,033 & 17 & 3,031 & 20 & 5.6 & 6.6 & -1.0 &
+0.80 (0.42-1.53) & .51 & .60 & 1.80 (1.00) \\
+HSV infection & 12,699 & 67 & 12,698 & 74 & 5.3 & 5.8 & -0.6
+& 0.86 (0.62-1.19) & .36 & .48 & 1.61 (1.00) \\
+Enterovirus infection & 39,875 & 317 & 39,868 & 350 & 7.9 &
+8.8 & -0.8 & 0.88 (0.75-1.02) & .08 & .14 & 1.55 (1.00) \\
+Viral gastroenteritis & 112,385 & 557 & 112,375 & 640 & 5.0
+& 5.7 & -0.7 & 0.83 (0.75-0.94) & .002 & .004 & 1.68
+(1.34) \\
+Roseola & 12,264 & 33 & 12,264 & 41 & 2.7 & 3.3 & -0.7 &
+0.76 (0.48-1.20) & .24 & .34 & 1.97 (1.00) \\
+Varicella & 4,754 & 21 & 4,752 & 17 & 4.4 & 3.6 & +0.8 &
+1.14 (0.60-2.16) & .69 & .75 & 1.54 (1.00) \\
+Hand, foot, and mouth disease & 132,552 & 252 & 132,508 &
+581 & 1.9 & 4.4 & -2.5 & 0.42 (0.36-0.49) & \textless.001 &
+\textless.001 & 4.16 (3.50) \\
+Kawasaki disease & 1,824 & 12 & 1,825 & 16 & 6.6 & 8.8 &
+-2.2 & 0.73 (0.34-1.54) & .41 & .53 & 2.09 (1.00) \\
+Febrile seizure & 31,541 & 245 & 31,537 & 182 & 7.8 & 5.8 &
++2.0 & 1.29 (1.06-1.56) & .009 & .02 & 1.90 (1.32) \\
+Atopic dermatitis & 367,331 & 903 & 367,287 & 1,247 & 2.5 &
+3.4 & -0.9 & 0.69 (0.64-0.76) & \textless.001 &
+\textless.001 & 2.24 (1.98) \\
+Iron-deficiency anemia & 62,489 & 274 & 62,465 & 397 & 4.4 &
+6.4 & -2.0 & 0.65 (0.56-0.76) & \textless.001 &
+\textless.001 & 2.46 (1.98) \\
+Diaper dermatitis (reference) & 409,361 & 1,234 & 409,285 &
+1,632 & 3.0 & 4.0 & -1.0 & 0.72 (0.67-0.77) & \textless.001
+& NA & 2.13 (1.91) \\
+\end{longtable}
+
+\textbf{Cerebral palsy}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.2348}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.1288}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0909}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Condition
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+At risk, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Events, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+At risk, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Events, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Risk/1000, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Risk/1000, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+RD/1000
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+HR (95\% CI)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\emph{P}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+FDR \emph{q}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+E-value (CI)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+CMV disease & 1,332 & 115 & 1,334 & 37 & 86.3 & 27.7 & +58.6
+& 3.02 (2.09-4.38) & \textless.001 & \textless.001 & 5.49
+(3.59) \\
+Bacterial meningitis & 1,238 & 174 & 1,246 & 45 & 140.5 &
+36.1 & +104.4 & 4.04 (2.91-5.61) & \textless.001 &
+\textless.001 & 7.55 (5.27) \\
+Viral meningitis/encephalitis & 1,680 & 40 & 1,684 & 15 &
+23.8 & 8.9 & +14.9 & 2.58 (1.42-4.66) & .002 & .004 & 4.59
+(2.20) \\
+Sepsis (postneonatal) & 9,528 & 570 & 9,619 & 318 & 59.8 &
+33.1 & +26.8 & 1.80 (1.57-2.06) & \textless.001 &
+\textless.001 & 3.00 (2.51) \\
+Osteomyelitis/septic arthritis & 1,257 & 29 & 1,260 & 21 &
+23.1 & 16.7 & +6.4 & 1.36 (0.78-2.38) & .28 & .40 & 2.06
+(1.00) \\
+UTI/pyelonephritis & 57,165 & 730 & 57,255 & 673 & 12.8 &
+11.8 & +1.0 & 1.04 (0.93-1.15) & .51 & .60 & 1.23 (1.00) \\
+RSV infection & 149,673 & 779 & 149,639 & 1,039 & 5.2 & 6.9
+& -1.7 & 0.73 (0.67-0.80) & \textless.001 & \textless.001 &
+2.08 (1.80) \\
+Influenza & 127,556 & 395 & 127,454 & 739 & 3.1 & 5.8 & -2.7
+& 0.52 (0.46-0.59) & \textless.001 & \textless.001 & 3.26
+(2.80) \\
+COVID-19 & 93,987 & 410 & 93,931 & 603 & 4.4 & 6.4 & -2.1 &
+0.64 (0.56-0.72) & \textless.001 & \textless.001 & 2.51
+(2.11) \\
+Pneumonia & 101,120 & 1,225 & 101,240 & 970 & 12.1 & 9.6 &
++2.5 & 1.23 (1.13-1.34) & \textless.001 & \textless.001 &
+1.77 (1.52) \\
+Pertussis & 3,029 & 17 & 3,026 & 32 & 5.6 & 10.6 & -5.0 &
+0.51 (0.28-0.92) & .02 & .05 & 3.34 (1.41) \\
+HSV infection & 12,681 & 94 & 12,662 & 80 & 7.4 & 6.3 & +1.1
+& 1.13 (0.84-1.52) & .42 & .53 & 1.51 (1.00) \\
+Enterovirus infection & 39,751 & 534 & 39,761 & 472 & 13.4 &
+11.9 & +1.6 & 1.09 (0.96-1.24) & .16 & .25 & 1.41 (1.00) \\
+Viral gastroenteritis & 112,279 & 544 & 112,205 & 832 & 4.8
+& 7.4 & -2.6 & 0.63 (0.57-0.70) & \textless.001 &
+\textless.001 & 2.54 (2.19) \\
+Roseola & 12,256 & 22 & 12,248 & 35 & 1.8 & 2.9 & -1.1 &
+0.60 (0.35-1.02) & .06 & .10 & 2.74 (1.00) \\
+Varicella & NR & NR & NR & NR & & & & NR & & & \\
+Hand, foot, and mouth disease & 132,503 & 212 & 132,324 &
+715 & 1.6 & 5.4 & -3.8 & 0.29 (0.25-0.34) & \textless.001 &
+\textless.001 & 6.40 (5.40) \\
+Kawasaki disease & NR & NR & NR & NR & & & & NR & & & \\
+Febrile seizure & 31,492 & 191 & 31,474 & 224 & 6.1 & 7.1 &
+-1.1 & 0.83 (0.68-1.00) & .05 & .09 & 1.72 (1.00) \\
+Atopic dermatitis & 367,232 & 932 & 367,017 & 1,758 & 2.5 &
+4.8 & -2.3 & 0.51 (0.47-0.55) & \textless.001 &
+\textless.001 & 3.35 (3.04) \\
+Iron-deficiency anemia & 62,437 & 347 & 62,315 & 658 & 5.6 &
+10.6 & -5.0 & 0.50 (0.44-0.57) & \textless.001 &
+\textless.001 & 3.42 (2.92) \\
+Diaper dermatitis (reference) & 409,242 & 1,203 & 408,950 &
+2,304 & 2.9 & 5.6 & -2.7 & 0.50 (0.46-0.53) & \textless.001
+& NA & 3.44 (3.16) \\
+\end{longtable}
+
+\textbf{Epilepsy}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.2313}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0597}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0597}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0597}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0597}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0597}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0597}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0597}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.1269}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0597}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0597}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.1045}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Condition
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+At risk, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Events, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+At risk, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Events, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Risk/1000, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Risk/1000, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+RD/1000
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+HR (95\% CI)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\emph{P}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+FDR \emph{q}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+E-value (CI)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+CMV disease & 1,308 & 112 & 1,309 & 47 & 85.6 & 35.9 & +49.7
+& 2.34 (1.67-3.30) & \textless.001 & \textless.001 & 4.12
+(2.72) \\
+Bacterial meningitis & 1,073 & 212 & 1,235 & 59 & 197.6 &
+47.8 & +149.8 & 4.45 (3.33-5.93) & \textless.001 &
+\textless.001 & 8.36 (6.12) \\
+Viral meningitis/encephalitis & 1,606 & 79 & 1,671 & 27 &
+49.2 & 16.2 & +33.0 & 2.97 (1.92-4.59) & \textless.001 &
+\textless.001 & 5.38 (3.24) \\
+Sepsis (postneonatal) & 8,975 & 663 & 9,466 & 337 & 73.9 &
+35.6 & +38.3 & 2.07 (1.82-2.36) & \textless.001 &
+\textless.001 & 3.56 (3.04) \\
+Osteomyelitis/septic arthritis & 1,233 & 39 & 1,241 & 32 &
+31.6 & 25.8 & +5.8 & 1.21 (0.76-1.93) & .43 & .53 & 1.71
+(1.00) \\
+UTI/pyelonephritis & 56,419 & 1,215 & 56,764 & 981 & 21.5 &
+17.3 & +4.3 & 1.19 (1.10-1.30) & \textless.001 &
+\textless.001 & 1.67 (1.42) \\
+RSV infection & 148,929 & 1,840 & 148,889 & 1,935 & 12.4 &
+13.0 & -0.6 & 0.94 (0.88-1.00) & .04 & .08 & 1.34 (1.05) \\
+Influenza & 126,876 & 1,329 & 126,742 & 1,492 & 10.5 & 11.8
+& -1.3 & 0.87 (0.81-0.93) & \textless.001 & \textless.001 &
+1.57 (1.35) \\
+COVID-19 & 93,419 & 1,067 & 93,405 & 968 & 11.4 & 10.4 &
++1.1 & 1.04 (0.95-1.13) & .40 & .53 & 1.24 (1.00) \\
+Pneumonia & 99,987 & 1,879 & 100,439 & 1,596 & 18.8 & 15.9 &
++2.9 & 1.15 (1.08-1.23) & \textless.001 & \textless.001 &
+1.57 (1.37) \\
+Pertussis & 3,014 & 56 & 3,013 & 54 & 18.6 & 17.9 & +0.7 &
+1.00 (0.69-1.45) & .98 & .99 & 1.07 (1.00) \\
+HSV infection & 12,571 & 214 & 12,573 & 200 & 17.0 & 15.9 &
++1.1 & 1.03 (0.85-1.25) & .76 & .81 & 1.21 (1.00) \\
+Enterovirus infection & 38,990 & 884 & 39,380 & 696 & 22.7 &
+17.7 & +5.0 & 1.24 (1.12-1.37) & \textless.001 &
+\textless.001 & 1.79 (1.49) \\
+Viral gastroenteritis & 111,536 & 1,554 & 111,512 & 1,546 &
+13.9 & 13.9 & +0.1 & 0.97 (0.91-1.04) & .43 & .53 & 1.20
+(1.00) \\
+Roseola & 12,200 & 111 & 12,203 & 122 & 9.1 & 10.0 & -0.9 &
+0.86 (0.67-1.11) & .25 & .36 & 1.60 (1.00) \\
+Varicella & 4,731 & 38 & 4,731 & 71 & 8.0 & 15.0 & -7.0 &
+0.50 (0.34-0.75) & \textless.001 & .002 & 3.38 (2.01) \\
+Hand, foot, and mouth disease & 132,081 & 1,008 & 131,570 &
+1,555 & 7.6 & 11.8 & -4.2 & 0.63 (0.58-0.68) & \textless.001
+& \textless.001 & 2.56 (2.30) \\
+Kawasaki disease & 1,815 & 20 & 1,806 & 27 & 11.0 & 15.0 &
+-3.9 & 0.70 (0.39-1.24) & .22 & .32 & 2.23 (1.00) \\
+Febrile seizure & 30,013 & 2,925 & 31,280 & 377 & 97.5 &
+12.1 & +85.4 & 8.33 (7.48-9.28) & \textless.001 &
+\textless.001 & 16.15 (14.45) \\
+Atopic dermatitis & 366,365 & 3,154 & 365,848 & 4,158 & 8.6
+& 11.4 & -2.8 & 0.72 (0.69-0.76) & \textless.001 &
+\textless.001 & 2.10 (1.96) \\
+Iron-deficiency anemia & 61,937 & 774 & 61,785 & 917 & 12.5
+& 14.8 & -2.3 & 0.80 (0.72-0.88) & \textless.001 &
+\textless.001 & 1.82 (1.54) \\
+Diaper dermatitis (reference) & 408,027 & 4,179 & 407,460 &
+4,612 & 10.2 & 11.3 & -1.1 & 0.86 (0.83-0.90) &
+\textless.001 & NA & 1.59 (1.46) \\
+\end{longtable}
+
+\textbf{Sensorineural hearing loss}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.2348}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.1288}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0909}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Condition
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+At risk, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Events, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+At risk, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Events, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Risk/1000, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Risk/1000, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+RD/1000
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+HR (95\% CI)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\emph{P}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+FDR \emph{q}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+E-value (CI)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+CMV disease & 1,239 & 198 & 1,326 & 43 & 159.8 & 32.4 &
++127.4 & 5.10 (3.67-7.09) & \textless.001 & \textless.001 &
+9.67 (6.79) \\
+Bacterial meningitis & 1,218 & 120 & 1,242 & 32 & 98.5 &
+25.8 & +72.8 & 3.91 (2.64-5.77) & \textless.001 &
+\textless.001 & 7.28 (4.73) \\
+Viral meningitis/encephalitis & 1,677 & 39 & 1,681 & 22 &
+23.3 & 13.1 & +10.2 & 1.70 (1.01-2.87) & .05 & .08 & 2.80
+(1.11) \\
+Sepsis (postneonatal) & 9,448 & 446 & 9,554 & 291 & 47.2 &
+30.5 & +16.7 & 1.53 (1.32-1.78) & \textless.001 &
+\textless.001 & 2.44 (1.97) \\
+Osteomyelitis/septic arthritis & 1,250 & 33 & 1,256 & 19 &
+26.4 & 15.1 & +11.3 & 1.72 (0.97-3.02) & .06 & .10 & 2.82
+(1.00) \\
+UTI/pyelonephritis & 56,979 & 744 & 57,097 & 683 & 13.1 &
+12.0 & +1.1 & 1.04 (0.94-1.16) & .43 & .53 & 1.25 (1.00) \\
+RSV infection & 149,302 & 1,232 & 149,314 & 1,502 & 8.3 &
+10.1 & -1.8 & 0.81 (0.75-0.87) & \textless.001 &
+\textless.001 & 1.79 (1.57) \\
+Influenza & 127,214 & 925 & 127,193 & 1,136 & 7.3 & 8.9 &
+-1.7 & 0.79 (0.73-0.86) & \textless.001 & \textless.001 &
+1.83 (1.58) \\
+COVID-19 & 93,655 & 785 & 93,715 & 847 & 8.4 & 9.0 & -0.7 &
+0.88 (0.80-0.97) & .01 & .03 & 1.52 (1.19) \\
+Pneumonia & 100,800 & 1,257 & 100,982 & 1,156 & 12.5 & 11.4
+& +1.0 & 1.06 (0.98-1.15) & .15 & .24 & 1.31 (1.00) \\
+Pertussis & 3,016 & 30 & 3,022 & 32 & 9.9 & 10.6 & -0.6 &
+0.90 (0.55-1.49) & .69 & .75 & 1.46 (1.00) \\
+HSV infection & 12,644 & 111 & 12,647 & 121 & 8.8 & 9.6 &
+-0.8 & 0.88 (0.68-1.14) & .33 & .45 & 1.53 (1.00) \\
+Enterovirus infection & 39,558 & 540 & 39,640 & 523 & 13.7 &
+13.2 & +0.5 & 1.00 (0.89-1.13) & 1.00 & 1.00 & 1.00
+(1.00) \\
+Viral gastroenteritis & 111,858 & 1,169 & 111,998 & 1,140 &
+10.5 & 10.2 & +0.3 & 0.99 (0.92-1.08) & .87 & .88 & 1.09
+(1.00) \\
+Roseola & 12,242 & 89 & 12,241 & 82 & 7.3 & 6.7 & +0.6 &
+1.03 (0.76-1.39) & .86 & .88 & 1.20 (1.00) \\
+Varicella & 4,743 & 36 & 4,746 & 29 & 7.6 & 6.1 & +1.5 &
+1.18 (0.72-1.92) & .51 & .60 & 1.64 (1.00) \\
+Hand, foot, and mouth disease & 132,033 & 864 & 132,075 &
+1,063 & 6.5 & 8.0 & -1.5 & 0.79 (0.72-0.87) & \textless.001
+& \textless.001 & 1.84 (1.58) \\
+Kawasaki disease & 1,823 & 14 & 1,823 & 14 & 7.7 & 7.7 &
++0.0 & 0.95 (0.45-2.00) & .89 & .91 & 1.28 (1.00) \\
+Febrile seizure & 31,386 & 269 & 31,404 & 298 & 8.6 & 9.5 &
+-0.9 & 0.87 (0.74-1.03) & .11 & .17 & 1.55 (1.00) \\
+Atopic dermatitis & 366,334 & 3,099 & 366,462 & 3,206 & 8.5
+& 8.7 & -0.3 & 0.93 (0.88-0.97) & .003 & .006 & 1.37
+(1.19) \\
+Iron-deficiency anemia & 62,176 & 595 & 62,158 & 661 & 9.6 &
+10.6 & -1.1 & 0.85 (0.76-0.95) & .005 & .01 & 1.62 (1.27) \\
+Diaper dermatitis (reference) & 408,275 & 3,290 & 408,313 &
+3,581 & 8.1 & 8.8 & -0.7 & 0.88 (0.84-0.92) & \textless.001
+& NA & 1.54 (1.40) \\
+\end{longtable}
+
+\textbf{Arm fracture (negative-control outcome)}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.2348}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.1288}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0606}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0909}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Condition
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+At risk, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Events, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+At risk, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Events, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Risk/1000, exposed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Risk/1000, controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+RD/1000
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+HR (95\% CI)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\emph{P}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+FDR \emph{q}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+E-value (CI)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+CMV disease & 1,334 & 37 & 1,336 & 40 & 27.7 & 29.9 & -2.2 &
+0.86 (0.55-1.35) & .51 & NA & 1.59 (1.00) \\
+Bacterial meningitis & 1,241 & 40 & 1,248 & 34 & 32.2 & 27.2
+& +5.0 & 1.20 (0.76-1.89) & .45 & NA & 1.68 (1.00) \\
+Viral meningitis/encephalitis & 1,678 & 58 & 1,683 & 63 &
+34.6 & 37.4 & -2.9 & 0.85 (0.60-1.22) & .39 & NA & 1.61
+(1.00) \\
+Sepsis (postneonatal) & 9,582 & 325 & 9,619 & 273 & 33.9 &
+28.4 & +5.5 & 1.17 (0.99-1.37) & .06 & NA & 1.61 (1.00) \\
+Osteomyelitis/septic arthritis & 1,223 & 72 & 1,260 & 23 &
+58.9 & 18.3 & +40.6 & 3.27 (2.04-5.22) & \textless.001 & NA
+& 5.98 (3.50) \\
+UTI/pyelonephritis & 57,147 & 2,140 & 57,210 & 1,806 & 37.4
+& 31.6 & +5.9 & 1.13 (1.06-1.20) & \textless.001 & NA & 1.51
+(1.32) \\
+RSV infection & 149,485 & 4,784 & 149,515 & 4,320 & 32.0 &
+28.9 & +3.1 & 1.11 (1.07-1.16) & \textless.001 & NA & 1.47
+(1.34) \\
+Influenza & 127,265 & 4,176 & 127,332 & 3,538 & 32.8 & 27.8
+& +5.0 & 1.16 (1.11-1.21) & \textless.001 & NA & 1.59
+(1.46) \\
+COVID-19 & 93,813 & 1,779 & 93,862 & 1,474 & 19.0 & 15.7 &
++3.3 & 1.20 (1.12-1.28) & \textless.001 & NA & 1.69
+(1.48) \\
+Pneumonia & 101,074 & 3,911 & 101,137 & 3,460 & 38.7 & 34.2
+& +4.5 & 1.10 (1.05-1.15) & \textless.001 & NA & 1.43
+(1.29) \\
+Pertussis & 3,028 & 123 & 3,026 & 96 & 40.6 & 31.7 & +8.9 &
+1.23 (0.94-1.61) & .13 & NA & 1.77 (1.00) \\
+HSV infection & 12,625 & 517 & 12,660 & 451 & 41.0 & 35.6 &
++5.3 & 1.10 (0.97-1.25) & .15 & NA & 1.42 (1.00) \\
+Enterovirus infection & 39,743 & 1,401 & 39,803 & 1,206 &
+35.3 & 30.3 & +5.0 & 1.13 (1.05-1.22) & .002 & NA & 1.52
+(1.27) \\
+Viral gastroenteritis & 112,019 & 4,348 & 112,139 & 3,660 &
+38.8 & 32.6 & +6.2 & 1.15 (1.10-1.20) & \textless.001 & NA &
+1.56 (1.43) \\
+Roseola & 12,244 & 421 & 12,241 & 390 & 34.4 & 31.9 & +2.5 &
+1.02 (0.89-1.17) & .81 & NA & 1.15 (1.00) \\
+Varicella & 4,742 & 215 & 4,748 & 184 & 45.3 & 38.8 & +6.6 &
+1.09 (0.90-1.33) & .37 & NA & 1.41 (1.00) \\
+Hand, foot, and mouth disease & 132,097 & 4,622 & 132,179 &
+4,121 & 35.0 & 31.2 & +3.8 & 1.10 (1.05-1.15) &
+\textless.001 & NA & 1.43 (1.29) \\
+Kawasaki disease & 1,819 & 59 & 1,820 & 45 & 32.4 & 24.7 &
++7.7 & 1.26 (0.85-1.85) & .25 & NA & 1.83 (1.00) \\
+Febrile seizure & 31,438 & 1,181 & 31,459 & 1,034 & 37.6 &
+32.9 & +4.7 & 1.10 (1.01-1.20) & .03 & NA & 1.43 (1.12) \\
+Atopic dermatitis & 366,586 & 10,297 & 366,675 & 9,484 &
+28.1 & 25.9 & +2.2 & 1.04 (1.01-1.07) & .005 & NA & 1.25
+(1.12) \\
+Iron-deficiency anemia & 62,281 & 1,905 & 62,314 & 1,719 &
+30.6 & 27.6 & +3.0 & 1.05 (0.98-1.12) & .18 & NA & 1.27
+(1.00) \\
+Diaper dermatitis (reference) & 408,509 & 13,281 & 408,557 &
+11,831 & 32.5 & 29.0 & +3.6 & 1.07 (1.04-1.10) &
+\textless.001 & NA & 1.34 (1.25) \\
+\end{longtable}
+
+Abbreviations: NA, not applicable or not computed; ADHD,
+attention-deficit/hyperactivity disorder; CMV,
+cytomegalovirus; FDR, false discovery rate; HR, hazard
+ratio; HSV, herpes simplex virus; NR, not reported
+(suppressed count); RD, risk difference; RSV, respiratory
+syncytial virus; UTI, urinary tract infection. Risks are
+crude cumulative proportions per 1,000 children over 1 day
+to 9 years. \emph{P} values were derived from the HR and
+95\% CI. FDR \emph{q} values are Benjamini-Hochberg adjusted
+across 144 tests; not computed (NA) for the reference
+exposure (diaper dermatitis) or the negative-control
+outcome. E-values are for the point estimate and (in
+parentheses) the CI limit closest to 1. Event counts of 10
+or fewer are shown as ≤10.
+
+\newpage
+
+\hypertarget{etable-5.-hazard-ratios-calibrated-against-diaper-dermatitis}{%
+\section*{eTable 5. Hazard Ratios Calibrated Against Diaper
+Dermatitis}\label{etable-5.-hazard-ratios-calibrated-against-diaper-dermatitis}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.2092}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1111}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1111}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1111}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1111}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1176}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1176}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1111}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Condition
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Autism
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+ADHD
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Speech-language
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Intellectual disability
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Cerebral palsy
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Epilepsy
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Hearing loss
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+CMV disease & 1.38 (1.02-1.86) & 0.68 (0.49-0.93) & 1.04
+(0.90-1.19) & 3.73 (2.13-6.52) & 6.08 (4.17-8.86) & 2.72
+(1.93-3.83) & 5.81 (4.17-8.11) \\
+Bacterial meningitis & 1.12 (0.81-1.54) & 0.64 (0.46-0.90) &
+1.19 (1.01-1.39) & 2.91 (1.67-5.06) & 8.13 (5.82-11.37) &
+5.15 (3.85-6.90) & 4.45 (3.01-6.60) \\
+Viral meningitis/encephalitis & 1.03 (0.72-1.48) & 0.65
+(0.49-0.86) & 0.78 (0.67-0.92) & 2.38 (1.14-4.99) & 5.18
+(2.85-9.42) & 3.44 (2.22-5.33) & 1.94 (1.15-3.28) \\
+Sepsis (postneonatal) & 0.94 (0.84-1.06) & 0.78 (0.70-0.88)
+& 0.93 (0.88-0.99) & 1.71 (1.40-2.09) & 3.62 (3.10-4.22) &
+2.40 (2.09-2.75) & 1.75 (1.50-2.04) \\
+Osteomyelitis/septic arthritis & 0.79 (0.54-1.16) & 0.78
+(0.58-1.04) & 0.89 (0.74-1.07) & NR & 2.73 (1.55-4.82) &
+1.40 (0.87-2.24) & 1.96 (1.11-3.45) \\
+UTI/pyelonephritis & 0.93 (0.87-1.00) & 0.74 (0.70-0.79) &
+0.81 (0.79-0.84) & 1.58 (1.36-1.83) & 2.08 (1.84-2.36) &
+1.38 (1.26-1.52) & 1.19 (1.06-1.33) \\
+RSV infection & 0.89 (0.85-0.93) & 0.81 (0.78-0.84) & 0.85
+(0.83-0.86) & 1.29 (1.14-1.47) & 1.47 (1.31-1.65) & 1.08
+(1.00-1.17) & 0.92 (0.84-1.00) \\
+Influenza & 0.86 (0.82-0.91) & 0.77 (0.74-0.80) & 0.85
+(0.83-0.87) & 0.97 (0.84-1.12) & 1.05 (0.91-1.20) & 1.00
+(0.92-1.09) & 0.90 (0.82-1.00) \\
+COVID-19 & 1.16 (1.10-1.22) & 1.07 (1.00-1.14) & 1.00
+(0.97-1.02) & 1.14 (0.93-1.39) & 1.28 (1.11-1.48) & 1.20
+(1.09-1.33) & 1.01 (0.90-1.12) \\
+Pneumonia & 0.84 (0.80-0.89) & 0.77 (0.75-0.81) & 0.82
+(0.81-0.84) & 1.60 (1.41-1.80) & 2.48 (2.22-2.76) & 1.33
+(1.23-1.44) & 1.21 (1.10-1.33) \\
+Pertussis & 0.73 (0.55-0.95) & 0.77 (0.63-0.94) & 0.82
+(0.72-0.93) & 1.12 (0.58-2.14) & 1.02 (0.57-1.85) & 1.15
+(0.79-1.68) & 1.03 (0.62-1.70) \\
+HSV infection & 0.77 (0.68-0.89) & 0.74 (0.67-0.82) & 0.86
+(0.81-0.92) & 1.19 (0.85-1.67) & 2.27 (1.67-3.08) & 1.19
+(0.98-1.46) & 1.00 (0.77-1.30) \\
+Enterovirus infection & 0.88 (0.82-0.94) & 0.76 (0.72-0.81)
+& 0.88 (0.85-0.91) & 1.22 (1.03-1.44) & 2.20 (1.91-2.54) &
+1.44 (1.29-1.60) & 1.14 (1.00-1.30) \\
+Viral gastroenteritis & 0.99 (0.95-1.04) & 0.89 (0.85-0.92)
+& 0.96 (0.94-0.99) & 1.16 (1.02-1.33) & 1.27 (1.12-1.45) &
+1.13 (1.04-1.22) & 1.13 (1.03-1.24) \\
+Roseola & 0.92 (0.79-1.07) & 0.71 (0.64-0.80) & 0.74
+(0.69-0.79) & 1.06 (0.66-1.68) & 1.20 (0.70-2.05) & 1.00
+(0.77-1.29) & 1.17 (0.87-1.59) \\
+Varicella & 0.86 (0.69-1.09) & 0.79 (0.68-0.93) & 0.80
+(0.72-0.89) & 1.59 (0.83-3.02) & NR & 0.58 (0.39-0.87) &
+1.34 (0.82-2.20) \\
+Hand, foot, and mouth disease & 0.73 (0.69-0.77) & 0.79
+(0.76-0.82) & 0.80 (0.78-0.82) & 0.59 (0.50-0.69) & 0.58
+(0.49-0.69) & 0.73 (0.67-0.80) & 0.90 (0.81-1.00) \\
+Kawasaki disease & 0.89 (0.64-1.23) & 0.54 (0.41-0.72) &
+0.74 (0.63-0.88) & 1.01 (0.48-2.15) & NR & 0.81 (0.45-1.44)
+& 1.08 (0.52-2.28) \\
+Febrile seizure & 1.00 (0.92-1.08) & 0.87 (0.81-0.92) & 0.98
+(0.95-1.02) & 1.80 (1.46-2.21) & 1.66 (1.35-2.04) & 9.65
+(8.60-10.83) & 1.00 (0.84-1.18) \\
+Atopic dermatitis & 0.98 (0.95-1.01) & 0.78 (0.76-0.80) &
+0.95 (0.94-0.97) & 0.97 (0.86-1.08) & 1.02 (0.92-1.14) &
+0.84 (0.79-0.89) & 1.06 (0.99-1.13) \\
+Iron-deficiency anemia & 0.69 (0.65-0.74) & 0.65 (0.61-0.68)
+& 0.88 (0.86-0.91) & 0.90 (0.76-1.07) & 1.00 (0.87-1.16) &
+0.92 (0.83-1.02) & 0.97 (0.86-1.10) \\
+\emph{Reference HR, diaper dermatitis} & \emph{1.05
+(1.03-1.08)} & \emph{1.36 (1.33-1.39)} & \emph{1.21
+(1.19-1.22)} & \emph{0.72 (0.67-0.77)} & \emph{0.50
+(0.46-0.53)} & \emph{0.86 (0.83-0.90)} & \emph{0.88
+(0.84-0.92)} \\
+\end{longtable}
+
+Values are calibrated HR (95\% CI) = HR for the condition
+divided by the HR for diaper dermatitis for the same
+outcome; see eMethods 6. Calibrated HRs above 1 indicate
+risk beyond that associated with a benign sick visit.
+
+\newpage
+
+\hypertarget{etable-6.-random-effects-pooled-hazard-ratios-by-condition-group}{%
+\section*{eTable 6. Random-Effects Pooled Hazard Ratios by
+Condition
+Group}\label{etable-6.-random-effects-pooled-hazard-ratios-by-condition-group}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3535}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3939}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1717}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0808}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Condition group (k)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Outcome
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Pooled HR (95\% CI)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\emph{I}\textsuperscript{2}, \%
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Invasive CNS (2) & Autism spectrum disorder & 1.14
+(0.90-1.44) & 0 \\
+Invasive CNS (2) & ADHD & 0.88 (0.71-1.09) & 0 \\
+Invasive CNS (2) & Speech-language disorder & 1.16
+(0.77-1.74) & 92 \\
+Invasive CNS (2) & Intellectual disability & 1.94
+(1.25-3.02) & 0 \\
+Invasive CNS (2) & Cerebral palsy & 3.46 (2.28-5.27) & 41 \\
+Invasive CNS (2) & Epilepsy & 3.76 (2.54-5.55) & 56 \\
+Invasive CNS (2) & Sensorineural hearing loss & 2.63
+(1.17-5.92) & 84 \\
+Invasive CNS (2) & Arm fracture (negative-control outcome) &
+0.98 (0.71-1.35) & 22 \\
+Invasive systemic (3) & Autism spectrum disorder & 0.98
+(0.92-1.04) & 0 \\
+Invasive systemic (3) & ADHD & 1.02 (0.97-1.07) & 0 \\
+Invasive systemic (3) & Speech-language disorder & 1.05
+(0.94-1.17) & 88 \\
+Invasive systemic (3) & Intellectual disability & 1.16
+(1.05-1.29) & 0 \\
+Invasive systemic (3) & Cerebral palsy & 1.36 (0.87-2.13) &
+95 \\
+Invasive systemic (3) & Epilepsy & 1.46 (0.94-2.28) & 96 \\
+Invasive systemic (3) & Sensorineural hearing loss & 1.34
+(0.96-1.86) & 90 \\
+Invasive systemic (3) & Arm fracture (negative-control
+outcome) & 1.44 (1.05-1.96) & 90 \\
+Respiratory (5) & Autism spectrum disorder & 0.95
+(0.84-1.08) & 97 \\
+Respiratory (5) & ADHD & 1.13 (1.03-1.25) & 96 \\
+Respiratory (5) & Speech-language disorder & 1.05
+(0.97-1.13) & 98 \\
+Respiratory (5) & Intellectual disability & 0.88 (0.71-1.09)
+& 90 \\
+Respiratory (5) & Cerebral palsy & 0.70 (0.49-1.00) & 98 \\
+Respiratory (5) & Epilepsy & 0.99 (0.88-1.12) & 89 \\
+Respiratory (5) & Sensorineural hearing loss & 0.88
+(0.77-1.00) & 87 \\
+Respiratory (5) & Arm fracture (negative-control outcome) &
+1.14 (1.10-1.17) & 33 \\
+Mucocutaneous/enteric/exanthem (6) & Autism spectrum
+disorder & 0.90 (0.78-1.03) & 95 \\
+Mucocutaneous/enteric/exanthem (6) & ADHD & 1.07 (0.99-1.14)
+& 89 \\
+Mucocutaneous/enteric/exanthem (6) & Speech-language
+disorder & 1.01 (0.93-1.11) & 98 \\
+Mucocutaneous/enteric/exanthem (6) & Intellectual disability
+& 0.76 (0.55-1.03) & 92 \\
+Mucocutaneous/enteric/exanthem (6) & Cerebral palsy & 0.67
+(0.40-1.13) & 98 \\
+Mucocutaneous/enteric/exanthem (6) & Epilepsy & 0.85
+(0.66-1.10) & 96 \\
+Mucocutaneous/enteric/exanthem (6) & Sensorineural hearing
+loss & 0.94 (0.83-1.06) & 72 \\
+Mucocutaneous/enteric/exanthem (6) & Arm fracture
+(negative-control outcome) & 1.12 (1.09-1.15) & 0 \\
+Noninfectious/inflammatory (4) & Autism spectrum disorder &
+0.93 (0.75-1.14) & 98 \\
+Noninfectious/inflammatory (4) & ADHD & 0.99 (0.87-1.13) &
+96 \\
+Noninfectious/inflammatory (4) & Speech-language disorder &
+1.11 (1.05-1.17) & 92 \\
+Noninfectious/inflammatory (4) & Intellectual disability &
+0.81 (0.59-1.12) & 92 \\
+Noninfectious/inflammatory (4) & Cerebral palsy & 0.59
+(0.46-0.75) & 91 \\
+Noninfectious/inflammatory (4) & Epilepsy & 1.37 (0.42-4.44)
+& 100 \\
+Noninfectious/inflammatory (4) & Sensorineural hearing loss
+& 0.91 (0.87-0.95) & 0 \\
+Noninfectious/inflammatory (4) & Arm fracture
+(negative-control outcome) & 1.05 (1.02-1.07) & 0 \\
+\end{longtable}
+
+DerSimonian-Laird random-effects pooling of log HRs.
+Invasive CNS: bacterial meningitis, viral
+meningitis/encephalitis. Invasive systemic: postneonatal
+sepsis, UTI/pyelonephritis, osteomyelitis/septic arthritis.
+Respiratory: RSV, influenza, COVID-19, pneumonia, pertussis.
+Mucocutaneous, enteric, and exanthematous: HSV, enterovirus,
+viral gastroenteritis, roseola, varicella, hand, foot, and
+mouth disease. Noninfectious/inflammatory: Kawasaki disease,
+febrile seizure, atopic dermatitis, iron-deficiency anemia.
+CMV was not pooled.
+
+\newpage
+
+\hypertarget{etable-7.-sensitivity-analysis-without-the-well-child-requirement-in-exposed-infants}{%
+\section*{eTable 7. Sensitivity Analysis Without the
+Well-Child Requirement in Exposed
+Infants}\label{etable-7.-sensitivity-analysis-without-the-well-child-requirement-in-exposed-infants}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2870}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2315}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1574}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1574}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Condition
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Matched pairs, unrestricted / primary
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Outcome
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+HR (95\% CI), unrestricted
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+HR (95\% CI), primary
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+CMV disease & 5,147 / 1,345 & Autism & 1.45 (1.21-1.73) &
+1.45 (1.07-1.96) \\
+& & ADHD & 0.87 (0.72-1.05) & 0.92 (0.67-1.26) \\
+Bacterial meningitis & 6,724 / 1,253 & Autism & 1.14
+(0.95-1.36) & 1.18 (0.86-1.62) \\
+& & ADHD & 0.62 (0.52-0.73) & 0.87 (0.62-1.23) \\
+& & Speech-language disorder & 0.95 (0.87-1.03) & 1.43
+(1.22-1.68) \\
+& & Intellectual disability & 1.77 (1.35-2.32) & 2.09
+(1.21-3.62) \\
+& & Cerebral palsy & 3.50 (2.96-4.14) & 4.04 (2.91-5.61) \\
+& & Epilepsy & 5.78 (4.94-6.77) & 4.45 (3.33-5.93) \\
+& & Hearing loss & 3.85 (3.18-4.67) & 3.91 (2.64-5.77) \\
+& & Arm fracture & 0.83 (0.67-1.02) & 1.20 (0.76-1.89) \\
+Viral meningitis/encephalitis & 8,707 / 1,685 & Autism &
+0.91 (0.76-1.10) & 1.09 (0.76-1.55) \\
+& & ADHD & 0.68 (0.58-0.79) & 0.88 (0.67-1.16) \\
+& & Speech-language disorder & 0.64 (0.58-0.70) & 0.94
+(0.81-1.10) \\
+& & Intellectual disability & 1.77 (1.14-2.75) & 1.71
+(0.82-3.57) \\
+& & Cerebral palsy & 3.10 (2.24-4.31) & 2.58 (1.42-4.66) \\
+& & Epilepsy & 3.72 (2.98-4.63) & 2.97 (1.92-4.59) \\
+& & Hearing loss & 1.68 (1.24-2.27) & 1.70 (1.01-2.87) \\
+& & Arm fracture & 1.05 (0.89-1.24) & 0.85 (0.60-1.22) \\
+Sepsis (postneonatal) & 51,429 / 9,667 & Autism & 0.92
+(0.86-0.98) & 0.99 (0.88-1.11) \\
+& & ADHD & 0.77 (0.72-0.81) & 1.06 (0.95-1.19) \\
+& & Speech-language disorder & 0.71 (0.68-0.73) & 1.12
+(1.06-1.19) \\
+& & Intellectual disability & 1.45 (1.32-1.60) & 1.23
+(1.02-1.48) \\
+& & Cerebral palsy & 1.80 (1.67-1.94) & 1.80 (1.57-2.06) \\
+& & Epilepsy & 2.28 (2.13-2.44) & 2.07 (1.82-2.36) \\
+& & Hearing loss & 1.46 (1.35-1.59) & 1.53 (1.32-1.78) \\
+& & Arm fracture & 1.03 (0.95-1.11) & 1.17 (0.99-1.37) \\
+Osteomyelitis/septic arthritis & 7,718 / 1,262 & Autism &
+0.95 (0.78-1.16) & 0.84 (0.57-1.23) \\
+& & ADHD & 0.86 (0.74-1.00) & 1.05 (0.79-1.41) \\
+& & Speech-language disorder & 0.67 (0.60-0.74) & 1.07
+(0.90-1.29) \\
+& & Intellectual disability & 1.28 (0.85-1.91) & NR \\
+& & Cerebral palsy & 1.41 (1.02-1.96) & 1.36 (0.78-2.38) \\
+& & Epilepsy & 1.34 (1.05-1.71) & 1.21 (0.76-1.93) \\
+& & Hearing loss & 1.45 (1.09-1.94) & 1.72 (0.97-3.02) \\
+& & Arm fracture & 1.40 (1.19-1.65) & 3.27 (2.04-5.22) \\
+UTI/pyelonephritis & 240,324 / 57,349 & Autism & 0.89
+(0.85-0.92) & 0.98 (0.92-1.05) \\
+& & ADHD & 0.74 (0.71-0.76) & 1.01 (0.95-1.06) \\
+& & Speech-language disorder & 0.60 (0.59-0.61) & 0.98
+(0.95-1.01) \\
+& & Intellectual disability & 1.36 (1.27-1.47) & 1.13
+(1.00-1.28) \\
+& & Cerebral palsy & 1.19 (1.11-1.26) & 1.04 (0.93-1.15) \\
+& & Epilepsy & 1.46 (1.39-1.53) & 1.19 (1.10-1.30) \\
+& & Hearing loss & 0.91 (0.85-0.97) & 1.04 (0.94-1.16) \\
+& & Arm fracture & 1.10 (1.07-1.14) & 1.13 (1.06-1.20) \\
+RSV infection & 460,015 / 149,865 & Autism & 0.91
+(0.89-0.94) & 0.93 (0.90-0.97) \\
+& & ADHD & 0.85 (0.83-0.87) & 1.10 (1.07-1.14) \\
+& & Speech-language disorder & 0.70 (0.69-0.71) & 1.02
+(1.00-1.04) \\
+& & Intellectual disability & 1.14 (1.07-1.22) & 0.93
+(0.83-1.03) \\
+& & Cerebral palsy & 0.96 (0.91-1.02) & 0.73 (0.67-0.80) \\
+& & Epilepsy & 1.18 (1.14-1.23) & 0.94 (0.88-1.00) \\
+& & Hearing loss & 0.71 (0.68-0.75) & 0.81 (0.75-0.87) \\
+& & Arm fracture & 1.21 (1.18-1.24) & 1.11 (1.07-1.16) \\
+Influenza & 314,636 / 127,676 & Autism & 0.90 (0.88-0.93) &
+0.91 (0.87-0.95) \\
+& & ADHD & 0.88 (0.86-0.90) & 1.05 (1.01-1.08) \\
+& & Speech-language disorder & 0.75 (0.73-0.76) & 1.03
+(1.01-1.05) \\
+& & Intellectual disability & 0.90 (0.82-0.98) & 0.70
+(0.61-0.79) \\
+& & Cerebral palsy & 0.80 (0.74-0.87) & 0.52 (0.46-0.59) \\
+& & Epilepsy & 1.17 (1.12-1.23) & 0.87 (0.81-0.93) \\
+& & Hearing loss & 0.70 (0.66-0.75) & 0.79 (0.73-0.86) \\
+& & Arm fracture & 1.20 (1.16-1.24) & 1.16 (1.11-1.21) \\
+COVID-19 & 240,801 / 94,108 & Autism & 1.29 (1.24-1.33) &
+1.22 (1.16-1.28) \\
+& & ADHD & 1.37 (1.31-1.44) & 1.45 (1.36-1.54) \\
+& & Speech-language disorder & 0.90 (0.89-0.92) & 1.20
+(1.18-1.23) \\
+& & Intellectual disability & 1.26 (1.11-1.44) & 0.82
+(0.68-0.98) \\
+& & Cerebral palsy & 0.89 (0.82-0.98) & 0.64 (0.56-0.72) \\
+& & Epilepsy & 1.44 (1.36-1.53) & 1.04 (0.95-1.13) \\
+& & Hearing loss & 0.75 (0.70-0.81) & 0.88 (0.80-0.97) \\
+& & Arm fracture & 1.35 (1.29-1.42) & 1.20 (1.12-1.28) \\
+Pneumonia & 331,838 / 101,444 & Autism & 0.80 (0.78-0.82) &
+0.89 (0.84-0.93) \\
+& & ADHD & 0.79 (0.77-0.81) & 1.05 (1.02-1.09) \\
+& & Speech-language disorder & 0.65 (0.64-0.66) & 0.99
+(0.97-1.01) \\
+& & Intellectual disability & 1.44 (1.35-1.53) & 1.15
+(1.04-1.26) \\
+& & Cerebral palsy & 1.55 (1.47-1.63) & 1.23 (1.13-1.34) \\
+& & Epilepsy & 1.50 (1.44-1.56) & 1.15 (1.08-1.23) \\
+& & Hearing loss & 0.98 (0.93-1.03) & 1.06 (0.98-1.15) \\
+& & Arm fracture & 1.11 (1.08-1.14) & 1.10 (1.05-1.15) \\
+Pertussis & 13,094 / 3,033 & Autism & 0.83 (0.70-0.98) &
+0.77 (0.58-1.00) \\
+& & ADHD & 0.73 (0.64-0.82) & 1.05 (0.86-1.28) \\
+& & Speech-language disorder & 0.62 (0.57-0.67) & 0.98
+(0.87-1.11) \\
+& & Intellectual disability & 0.89 (0.59-1.35) & 0.80
+(0.42-1.53) \\
+& & Cerebral palsy & 0.77 (0.54-1.10) & 0.51 (0.28-0.92) \\
+& & Epilepsy & 1.42 (1.16-1.75) & 1.00 (0.69-1.45) \\
+& & Hearing loss & 0.68 (0.51-0.92) & 0.90 (0.55-1.49) \\
+& & Arm fracture & 1.12 (0.97-1.30) & 1.23 (0.94-1.61) \\
+HSV infection & 38,830 / 12,702 & Autism & 0.76 (0.69-0.83)
+& 0.82 (0.71-0.93) \\
+& & ADHD & 0.82 (0.76-0.87) & 1.01 (0.92-1.11) \\
+& & Speech-language disorder & 0.70 (0.67-0.73) & 1.04
+(0.98-1.10) \\
+& & Intellectual disability & 1.20 (0.98-1.46) & 0.86
+(0.62-1.19) \\
+& & Cerebral palsy & 1.70 (1.42-2.03) & 1.13 (0.84-1.52) \\
+& & Epilepsy & 1.62 (1.44-1.84) & 1.03 (0.85-1.25) \\
+& & Hearing loss & 0.90 (0.76-1.07) & 0.88 (0.68-1.14) \\
+& & Arm fracture & 1.18 (1.09-1.28) & 1.10 (0.97-1.25) \\
+Enterovirus infection & 125,491 / 39,922 & Autism & 0.95
+(0.91-0.99) & 0.93 (0.86-0.99) \\
+& & ADHD & 0.86 (0.83-0.90) & 1.04 (0.98-1.10) \\
+& & Speech-language disorder & 0.77 (0.75-0.78) & 1.06
+(1.02-1.09) \\
+& & Intellectual disability & 1.24 (1.13-1.36) & 0.88
+(0.75-1.02) \\
+& & Cerebral palsy & 1.25 (1.16-1.35) & 1.09 (0.96-1.24) \\
+& & Epilepsy & 1.62 (1.53-1.72) & 1.24 (1.12-1.37) \\
+& & Hearing loss & 0.95 (0.88-1.03) & 1.00 (0.89-1.13) \\
+& & Arm fracture & 1.13 (1.08-1.19) & 1.13 (1.05-1.22) \\
+Viral gastroenteritis & 260,024 / 112,443 & Autism & 1.05
+(1.02-1.09) & 1.05 (1.00-1.09) \\
+& & ADHD & 0.99 (0.97-1.02) & 1.21 (1.17-1.25) \\
+& & Speech-language disorder & 0.87 (0.86-0.89) & 1.16
+(1.14-1.19) \\
+& & Intellectual disability & 1.00 (0.93-1.09) & 0.83
+(0.75-0.94) \\
+& & Cerebral palsy & 0.86 (0.80-0.93) & 0.63 (0.57-0.70) \\
+& & Epilepsy & 1.27 (1.21-1.33) & 0.97 (0.91-1.04) \\
+& & Hearing loss & 0.97 (0.91-1.03) & 0.99 (0.92-1.08) \\
+& & Arm fracture & 1.16 (1.13-1.20) & 1.15 (1.10-1.20) \\
+Roseola & 38,795 / 12,265 & Autism & 0.74 (0.66-0.82) & 0.97
+(0.83-1.13) \\
+& & ADHD & 0.76 (0.70-0.82) & 0.97 (0.87-1.08) \\
+& & Speech-language disorder & 0.56 (0.53-0.59) & 0.89
+(0.83-0.96) \\
+& & Intellectual disability & 0.81 (0.60-1.09) & 0.76
+(0.48-1.20) \\
+& & Cerebral palsy & 0.50 (0.36-0.70) & 0.60 (0.35-1.02) \\
+& & Epilepsy & 0.92 (0.78-1.09) & 0.86 (0.67-1.11) \\
+& & Hearing loss & 0.71 (0.57-0.89) & 1.03 (0.76-1.39) \\
+& & Arm fracture & 1.17 (1.07-1.27) & 1.02 (0.89-1.17) \\
+Varicella & 15,576 / 4,755 & Autism & 0.81 (0.69-0.95) &
+0.91 (0.72-1.14) \\
+& & ADHD & 0.78 (0.70-0.87) & 1.08 (0.93-1.26) \\
+& & Speech-language disorder & 0.62 (0.57-0.67) & 0.96
+(0.86-1.07) \\
+& & Intellectual disability & 0.71 (0.48-1.07) & 1.14
+(0.60-2.16) \\
+& & Cerebral palsy & 0.44 (0.26-0.74) & NR \\
+& & Epilepsy & 0.80 (0.63-1.01) & 0.50 (0.34-0.75) \\
+& & Hearing loss & 0.98 (0.70-1.36) & 1.18 (0.72-1.92) \\
+& & Arm fracture & 1.03 (0.91-1.16) & 1.09 (0.90-1.33) \\
+Hand, foot, and mouth disease & 242,030 / 132,566 & Autism &
+0.79 (0.77-0.82) & 0.77 (0.74-0.80) \\
+& & ADHD & 1.00 (0.97-1.02) & 1.07 (1.04-1.10) \\
+& & Speech-language disorder & 0.79 (0.77-0.80) & 0.96
+(0.94-0.98) \\
+& & Intellectual disability & 0.55 (0.49-0.61) & 0.42
+(0.36-0.49) \\
+& & Cerebral palsy & 0.39 (0.34-0.44) & 0.29 (0.25-0.34) \\
+& & Epilepsy & 0.80 (0.75-0.85) & 0.63 (0.58-0.68) \\
+& & Hearing loss & 0.76 (0.70-0.82) & 0.79 (0.72-0.87) \\
+& & Arm fracture & 1.18 (1.15-1.22) & 1.10 (1.05-1.15) \\
+Kawasaki disease & 10,796 / 1,825 & Autism & 0.79
+(0.67-0.93) & 0.94 (0.68-1.29) \\
+& & ADHD & 0.75 (0.65-0.87) & 0.73 (0.55-0.97) \\
+& & Speech-language disorder & 0.51 (0.46-0.56) & 0.90
+(0.76-1.06) \\
+& & Intellectual disability & 0.95 (0.60-1.50) & 0.73
+(0.34-1.54) \\
+& & Cerebral palsy & 0.75 (0.46-1.20) & NR \\
+& & Epilepsy & 0.76 (0.58-0.99) & 0.70 (0.39-1.24) \\
+& & Hearing loss & 0.68 (0.48-0.96) & 0.95 (0.45-2.00) \\
+& & Arm fracture & 0.95 (0.80-1.13) & 1.26 (0.85-1.85) \\
+Diaper dermatitis (reference) & 602,639 / 409,413 & Autism &
+1.06 (1.04-1.09) & 1.05 (1.03-1.08) \\
+& & ADHD & 1.26 (1.24-1.28) & 1.36 (1.33-1.39) \\
+& & Speech-language disorder & 1.05 (1.04-1.06) & 1.21
+(1.19-1.22) \\
+& & Intellectual disability & 0.85 (0.81-0.91) & 0.72
+(0.67-0.77) \\
+& & Cerebral palsy & 0.63 (0.60-0.67) & 0.50 (0.46-0.53) \\
+& & Epilepsy & 1.02 (0.99-1.06) & 0.86 (0.83-0.90) \\
+& & Hearing loss & 0.84 (0.81-0.88) & 0.88 (0.84-0.92) \\
+& & Arm fracture & 1.09 (1.07-1.11) & 1.07 (1.04-1.10) \\
+\end{longtable}
+
+Unrestricted: exposure cohort did not require a well-child
+visit (controls did). Bacterial meningitis, viral
+meningitis/encephalitis, and HSV infection used 30
+covariates (adding P92, K21, and Z82); others used the same
+27 covariates as the primary analysis. CMV unrestricted
+estimates are from a separate earlier analysis matched on 9
+covariates (age at index, current age, sex, race, ethnicity,
+P07, Q20-Q28, D80-D89, Q90-Q99). Unrestricted analyses were
+not completed for febrile seizure, atopic dermatitis, and
+iron-deficiency anemia.
+
+\newpage
+
+\hypertarget{etable-8.-e-values-for-statistically-significant-positive-associations}{%
+\section*{eTable 8. E-Values for Statistically Significant
+Positive
+Associations}\label{etable-8.-e-values-for-statistically-significant-positive-associations}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.3061}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2755}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1735}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0816}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0816}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0816}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Condition
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Outcome
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+HR (95\% CI)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+FDR \emph{q}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+E-value, point
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+E-value, CI limit
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Febrile seizure & Epilepsy & 8.33 (7.48-9.28) &
+\textless.001 & 16.15 & 14.45 \\
+CMV disease & Sensorineural hearing loss & 5.10 (3.67-7.09)
+& \textless.001 & 9.67 & 6.79 \\
+Bacterial meningitis & Epilepsy & 4.45 (3.33-5.93) &
+\textless.001 & 8.36 & 6.12 \\
+Bacterial meningitis & Cerebral palsy & 4.04 (2.91-5.61) &
+\textless.001 & 7.55 & 5.27 \\
+Bacterial meningitis & Sensorineural hearing loss & 3.91
+(2.64-5.77) & \textless.001 & 7.28 & 4.73 \\
+CMV disease & Cerebral palsy & 3.02 (2.09-4.38) &
+\textless.001 & 5.49 & 3.59 \\
+Viral meningitis/encephalitis & Epilepsy & 2.97 (1.92-4.59)
+& \textless.001 & 5.38 & 3.24 \\
+CMV disease & Intellectual disability & 2.68 (1.54-4.66) &
+.001 & 4.80 & 2.45 \\
+Viral meningitis/encephalitis & Cerebral palsy & 2.58
+(1.42-4.66) & .004 & 4.59 & 2.20 \\
+CMV disease & Epilepsy & 2.34 (1.67-3.30) & \textless.001 &
+4.12 & 2.72 \\
+Bacterial meningitis & Intellectual disability & 2.09
+(1.21-3.62) & .02 & 3.60 & 1.71 \\
+Sepsis (postneonatal) & Epilepsy & 2.07 (1.82-2.36) &
+\textless.001 & 3.56 & 3.04 \\
+Sepsis (postneonatal) & Cerebral palsy & 1.80 (1.57-2.06) &
+\textless.001 & 3.00 & 2.51 \\
+Sepsis (postneonatal) & Sensorineural hearing loss & 1.53
+(1.32-1.78) & \textless.001 & 2.44 & 1.97 \\
+COVID-19 & ADHD & 1.45 (1.36-1.54) & \textless.001 & 2.25 &
+2.06 \\
+CMV disease & Autism spectrum disorder & 1.45 (1.07-1.96) &
+.03 & 2.25 & 1.35 \\
+Bacterial meningitis & Speech-language disorder & 1.43
+(1.22-1.68) & \textless.001 & 2.21 & 1.74 \\
+Febrile seizure & Intellectual disability & 1.29 (1.06-1.56)
+& .02 & 1.90 & 1.32 \\
+CMV disease & Speech-language disorder & 1.25 (1.08-1.44) &
+.005 & 1.80 & 1.38 \\
+Enterovirus infection & Epilepsy & 1.24 (1.12-1.37) &
+\textless.001 & 1.79 & 1.49 \\
+Pneumonia & Cerebral palsy & 1.23 (1.13-1.34) &
+\textless.001 & 1.77 & 1.52 \\
+COVID-19 & Autism spectrum disorder & 1.22 (1.16-1.28) &
+\textless.001 & 1.73 & 1.60 \\
+Viral gastroenteritis & ADHD & 1.21 (1.17-1.25) &
+\textless.001 & 1.70 & 1.61 \\
+COVID-19 & Speech-language disorder & 1.20 (1.18-1.23) &
+\textless.001 & 1.70 & 1.63 \\
+UTI/pyelonephritis & Epilepsy & 1.19 (1.10-1.30) &
+\textless.001 & 1.67 & 1.42 \\
+Febrile seizure & Speech-language disorder & 1.19
+(1.14-1.23) & \textless.001 & 1.66 & 1.54 \\
+Febrile seizure & ADHD & 1.18 (1.11-1.25) & \textless.001 &
+1.64 & 1.46 \\
+Viral gastroenteritis & Speech-language disorder & 1.16
+(1.14-1.19) & \textless.001 & 1.60 & 1.54 \\
+Pneumonia & Epilepsy & 1.15 (1.08-1.23) & \textless.001 &
+1.57 & 1.37 \\
+Pneumonia & Intellectual disability & 1.15 (1.04-1.26) & .01
+& 1.56 & 1.25 \\
+Atopic dermatitis & Speech-language disorder & 1.15
+(1.13-1.16) & \textless.001 & 1.56 & 1.52 \\
+Sepsis (postneonatal) & Speech-language disorder & 1.12
+(1.06-1.19) & \textless.001 & 1.49 & 1.31 \\
+RSV infection & ADHD & 1.10 (1.07-1.14) & \textless.001 &
+1.43 & 1.33 \\
+Hand, foot, and mouth disease & ADHD & 1.07 (1.04-1.10) &
+\textless.001 & 1.34 & 1.23 \\
+Iron-deficiency anemia & Speech-language disorder & 1.06
+(1.03-1.09) & \textless.001 & 1.32 & 1.23 \\
+Atopic dermatitis & ADHD & 1.06 (1.04-1.08) & \textless.001
+& 1.31 & 1.23 \\
+Enterovirus infection & Speech-language disorder & 1.06
+(1.02-1.09) & .001 & 1.31 & 1.19 \\
+Pneumonia & ADHD & 1.05 (1.02-1.09) & .007 & 1.29 & 1.15 \\
+Influenza & ADHD & 1.05 (1.01-1.08) & .02 & 1.27 & 1.12 \\
+Atopic dermatitis & Autism spectrum disorder & 1.03
+(1.01-1.06) & .03 & 1.21 & 1.09 \\
+Influenza & Speech-language disorder & 1.03 (1.01-1.05) &
+.01 & 1.20 & 1.10 \\
+RSV infection & Speech-language disorder & 1.02 (1.00-1.04)
+& .05 & 1.16 & 1.06 \\
+\end{longtable}
+
+Includes all condition-outcome pairs with a lower 95\% CI
+limit above 1 and FDR \emph{q} \textless{} .05, ordered by
+E-value.
+
+\newpage
+
+\hypertarget{etable-9.-complete-baseline-characteristics-for-the-cmv-comparison}{%
+\section*{eTable 9. Complete Baseline Characteristics for the
+CMV
+Comparison}\label{etable-9.-complete-baseline-characteristics-for-the-cmv-comparison}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.3514}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1081}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1622}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0721}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1081}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1261}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0721}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Characteristic
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+CMV disease, before (n = 1,347)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Controls, before (n = 3,090,897)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+SMD, before
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+CMV disease, after (n = 1,345)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Controls, after (n = 1,345)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+SMD, after
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Current age, mean (SD), y & 6.66 (4.47) & 7.45 (4.81) & 0.17
+& 6.66 (4.48) & 6.65 (4.54) & 0.00 \\
+Age at index, mean (SD), y & 0.18 (0.38) & 0.16 (0.36) &
+0.06 & 0.18 (0.38) & 0.18 (0.39) & 0.02 \\
+Male & 747 (55.5) & 1,581,797 (51.2) & 0.09 & 745 (55.4) &
+765 (56.9) & 0.03 \\
+Female \textsuperscript{a} & 597 (44.3) & 1,500,492 (48.5) &
+0.08 & 597 (44.4) & 579 (43.0) & 0.03 \\
+Hispanic or Latino & 367 (27.2) & 620,299 (20.1) & 0.17 &
+366 (27.2) & 351 (26.1) & 0.03 \\
+Not Hispanic or Latino & 786 (58.4) & 1,748,790 (56.6) &
+0.04 & 785 (58.4) & 805 (59.9) & 0.03 \\
+Unknown ethnicity \textsuperscript{a} & 194 (14.4) & 721,808
+(23.4) & 0.23 & 194 (14.4) & 189 (14.1) & 0.01 \\
+White & 564 (41.9) & 1,554,000 (50.3) & 0.17 & 563 (41.9) &
+569 (42.3) & 0.01 \\
+Black or African American & 343 (25.5) & 565,742 (18.3) &
+0.17 & 343 (25.5) & 354 (26.3) & 0.02 \\
+Asian & 102 (7.6) & 140,522 (4.5) & 0.13 & 102 (7.6) & 103
+(7.7) & 0.00 \\
+Native Hawaiian or Other Pacific Islander
+\textsuperscript{a} & 31 (2.3) & 24,433 (0.8) & 0.12 & 31
+(2.3) & ≤10 (0.7) & 0.13 \\
+American Indian or Alaska Native \textsuperscript{a} & 11
+(0.8) & 18,197 (0.6) & 0.03 & 11 (0.8) & ≤10 (0.7) & 0.01 \\
+Other race \textsuperscript{a} & 112 (8.3) & 243,510 (7.9) &
+0.02 & 112 (8.3) & 138 (10.3) & 0.07 \\
+Unknown race \textsuperscript{a} & 184 (13.7) & 544,493
+(17.6) & 0.11 & 183 (13.6) & 164 (12.2) & 0.04 \\
+Short gestation/low birth weight (P07) & 364 (27.0) &
+107,707 (3.5) & 0.69 & 362 (26.9) & 437 (32.5) & 0.12 \\
+Slow fetal growth/fetal malnutrition (P05) & 115 (8.5) &
+14,743 (0.5) & 0.40 & 113 (8.4) & 99 (7.4) & 0.04 \\
+Newborn affected by maternal factors or delivery
+complications (P00-P04) & 80 (5.9) & 56,212 (1.8) & 0.21 &
+80 (5.9) & 102 (7.6) & 0.07 \\
+Birth trauma (P10-P15) & ≤10 (0.7) & 9,473 (0.3) & 0.06 &
+≤10 (0.7) & 15 (1.1) & 0.04 \\
+Respiratory distress of newborn (P22) & 106 (7.9) & 15,036
+(0.5) & 0.38 & 106 (7.9) & 105 (7.8) & 0.00 \\
+Transitory endocrine/metabolic disorders of newborn
+(P70-P74) & 108 (8.0) & 12,074 (0.4) & 0.39 & 108 (8.0) &
+101 (7.5) & 0.02 \\
+Other disturbances of cerebral status of newborn (P91) & 36
+(2.7) & 6,218 (0.2) & 0.21 & 36 (2.7) & 33 (2.5) & 0.01 \\
+Feeding problems of newborn (P92) \textsuperscript{a} & 163
+(12.1) & 63,232 (2.0) & 0.40 & 163 (12.1) & 176 (13.1) &
+0.03 \\
+Congenital malformations of nervous system (Q00-Q07) & 173
+(12.8) & 11,303 (0.4) & 0.52 & 171 (12.7) & 155 (11.5) &
+0.04 \\
+Congenital malformations of circulatory system (Q20-Q28) &
+310 (23.0) & 64,870 (2.1) & 0.67 & 309 (23.0) & 343 (25.5) &
+0.06 \\
+Cleft lip and palate (Q35-Q37) \textsuperscript{a} & ≤10
+(0.7) & 4,561 (0.1) & 0.09 & ≤10 (0.7) & 15 (1.1) & 0.04 \\
+Congenital musculoskeletal malformations (Q65-Q79)
+\textsuperscript{a} & 135 (10.0) & 105,946 (3.4) & 0.27 &
+134 (10.0) & 146 (10.9) & 0.03 \\
+Chromosomal abnormalities (Q90-Q99) & 32 (2.4) & 9,512 (0.3)
+& 0.18 & 31 (2.3) & 36 (2.7) & 0.02 \\
+Disorders of the immune mechanism (D80-D89) & 88 (6.5) &
+1,958 (0.1) & 0.37 & 86 (6.4) & 49 (3.6) & 0.13 \\
+Lack of expected normal physiological development (R62) &
+301 (22.3) & 69,705 (2.3) & 0.64 & 300 (22.3) & 308 (22.9) &
+0.01 \\
+Symptoms concerning food and fluid intake (R63) & 304 (22.6)
+& 93,265 (3.0) & 0.61 & 303 (22.5) & 300 (22.3) & 0.01 \\
+Acute upper respiratory infection (J06) & 197 (14.6) &
+199,340 (6.4) & 0.27 & 195 (14.5) & 202 (15.0) & 0.01 \\
+Asthma (J45) & 24 (1.8) & 16,641 (0.5) & 0.12 & 24 (1.8) &
+25 (1.9) & 0.01 \\
+Nonsuppurative otitis media (H65) & 53 (3.9) & 28,354 (0.9)
+& 0.20 & 53 (3.9) & 63 (4.7) & 0.04 \\
+Suppurative/unspecified otitis media (H66) & 96 (7.1) &
+88,933 (2.9) & 0.20 & 95 (7.1) & 100 (7.4) & 0.01 \\
+Gastroesophageal reflux disease (K21) \textsuperscript{a} &
+190 (14.1) & 156,747 (5.1) & 0.31 & 188 (14.0) & 221 (16.4)
+& 0.07 \\
+Family history of mental and behavioral disorders (Z81) &
+≤10 (0.7) & 3,633 (0.1) & 0.10 & ≤10 (0.7) & ≤10 (0.7) &
+0.00 \\
+Family history of disabilities and chronic diseases (Z82)
+\textsuperscript{a} & 45 (3.3) & 17,567 (0.6) & 0.20 & 45
+(3.3) & 35 (2.6) & 0.04 \\
+Well-child visit (any time to index) (Z00.1)
+\textsuperscript{a} & 756 (56.1) & 3,090,897 (100.0) & 1.25
+& 755 (56.1) & 1,345 (100.0) & 1.25 \\
+Systemic antibacterials (ATC J01) & 441 (32.7) & 231,558
+(7.5) & 0.66 & 440 (32.7) & 499 (37.1) & 0.09 \\
+\end{longtable}
+
+Abbreviations: CMV, cytomegalovirus; SMD, absolute
+standardized mean difference.
+
+Values are No.~(\%) unless otherwise indicated.
+Before-matching denominators are infants with data in the
+baseline window as reported by TriNetX (cohort sizes 1,386
+and 3,228,691). TriNetX reports counts of 10 or fewer as 10;
+these are shown as ≤10, and SMDs for them are approximate.
+Race and ethnicity were as recorded in the electronic health
+record.
+
+\textsuperscript{a} Not included in the propensity score
+model (shown to assess balance on variables not used for
+matching). The well-child visit was required for all infants
+before age 2 years; in the exposed group it could occur
+after the CMV index date, so it appears in the covariate
+window for only 56.1\%.
+
+\newpage
+
+\hypertarget{etable-10.-same-era-sensitivity-analysis-for-covid-19}{%
+\section*{eTable 10. Same-Era Sensitivity Analysis for
+COVID-19}\label{etable-10.-same-era-sensitivity-analysis-for-covid-19}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2883}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1261}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1261}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1532}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1532}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1532}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Outcome
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+COVID-19, events/at risk
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Controls, events/at risk
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+HR (95\% CI), COVID-19 vs same-era controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+HR (95\% CI), diaper dermatitis vs same-era controls
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Calibrated HR (95\% CI)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Autism spectrum disorder & 3,594/87,154 & 2,800/87,142 &
+1.22 (1.17-1.29) & 1.14 (1.10-1.19) & 1.07 (1.01-1.14) \\
+ADHD & 1,894/87,201 & 1,357/87,206 & 1.49 (1.39-1.60) & 1.53
+(1.45-1.61) & 0.98 (0.90-1.07) \\
+Speech-language disorder & 17,395/85,814 & 13,849/85,512 &
+1.22 (1.19-1.25) & 1.25 (1.23-1.27) & 0.97 (0.95-1.00) \\
+Intellectual disability & 179/87,178 & 179/87,167 & 1.01
+(0.82-1.25) & 0.66 (0.55-0.79) & 1.54 (1.16-2.03) \\
+Cerebral palsy & 355/87,117 & 495/87,082 & 0.67 (0.59-0.77)
+& 0.50 (0.45-0.56) & 1.35 (1.13-1.60) \\
+Epilepsy & 938/86,606 & 832/86,693 & 1.07 (0.98-1.18) & 0.82
+(0.76-0.88) & 1.31 (1.16-1.48) \\
+Sensorineural hearing loss & 667/86,823 & 735/86,846 & 0.86
+(0.77-0.95) & 0.88 (0.82-0.95) & 0.97 (0.86-1.11) \\
+Arm fracture (negative control) & 1,547/86,954 &
+1,216/87,017 & 1.24 (1.15-1.34) & 1.08 (1.02-1.14) & 1.15
+(1.05-1.27) \\
+\end{longtable}
+
+Both exposure and control cohorts were restricted to
+children with a current age of 0-6 years (born from late
+2019 onward). COVID-19 comparison: 93,329 exposed and
+1,348,903 eligible controls before matching; 87,210 matched
+pairs; median follow-up 1,001 vs 909 days. Diaper dermatitis
+comparison: 225,532 and 1,216,700 before matching; 189,561
+matched pairs; median follow-up 740 vs 688 days. Calibrated
+HR = COVID-19 HR divided by the same-era diaper dermatitis
+HR for the same outcome. Relative to its own
+negative-control outcome (arm fracture), the COVID-19 autism
+HR was 0.98 (95\% CI, 0.90-1.08) and the ADHD HR was 1.20
+(95\% CI, 1.08-1.33). The proportional hazards test was
+significant for autism (P \textless{} .001) and
+speech-language disorder (P \textless{} .001) in the
+COVID-19 comparison; HRs are averages over follow-up.
+TriNetX analyses 6adfd51c027df79bdfadb92c and
+6adfd5390a32ede36b4b2db0.
+
+\end{landscape}
+
+\hypertarget{efigure-1.-calibrated-hazard-ratios-for-autism-and-adhd}{%
+\section*{eFigure 1. Calibrated Hazard Ratios for Autism and
+ADHD}\label{efigure-1.-calibrated-hazard-ratios-for-autism-and-adhd}}
+
+\includegraphics[width=6.5in,height=7.2in]{figs/eFigure1_calibrated_HR.png}
+
+Ratio of each condition's HR to the diaper dermatitis HR for
+the same outcome, with 95\% CIs (eMethods 6). Values above 1
+indicate risk beyond that associated with a benign sick
+visit.
+
+\newpage
+
+\hypertarget{efigure-2.-absolute-risk-differences-per-1000-children}{%
+\section*{eFigure 2. Absolute Risk Differences per 1,000
+Children}\label{efigure-2.-absolute-risk-differences-per-1000-children}}
+
+\includegraphics[width=6.5in,height=7.2in]{figs/eFigure2_risk_difference.png}
+
+Crude cumulative risk in exposed children minus matched
+controls over 1 day to 9 years.
+
+\newpage
+
+\hypertarget{efigure-3.-primary-well-child-restricted-vs-unrestricted-design}{%
+\section*{eFigure 3. Primary (Well-Child-Restricted) vs
+Unrestricted
+Design}\label{efigure-3.-primary-well-child-restricted-vs-unrestricted-design}}
+
+\includegraphics[width=6.5in,height=7.2in]{figs/eFigure3_restricted_vs_unrestricted.png}
+
+Each point is 1 condition; lines are 95\% CIs on each axis.
+Points on the dashed diagonal have the same HR under both
+designs.
+
+\newpage
+
+\hypertarget{efigure-4.-e-values}{%
+\section*{eFigure 4. E-Values}\label{efigure-4.-e-values}}
+
+\includegraphics[width=6.5in,height=7.2in]{figs/eFigure4_E_values.png}
+
+E-values for statistically significant positive associations
+(FDR \emph{q} \textless{} .05 and lower CI limit above 1).
+Light bars, point estimate; dark bars, CI limit closest to
+1.
+
+\newpage
+
+\hypertarget{ereferences}{%
+\section*{eReferences}\label{ereferences}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Palchuk MB, London JW, Perez-Rey D, et al.~A global
+  federated real-world data and analytics platform for
+  research. \emph{JAMIA Open}. 2023;6(2):ooad035.
+  doi:10.1093/jamiaopen/ooad035
+\item
+  Benjamini Y, Hochberg Y. Controlling the false discovery
+  rate: a practical and powerful approach to multiple
+  testing. \emph{J R Stat Soc Series B Stat Methodol}.
+  1995;57(1):289-300. doi:10.1111/j.2517-6161.1995.tb02031.x
+\item
+  VanderWeele TJ, Ding P. Sensitivity analysis in
+  observational research: introducing the E-value. \emph{Ann
+  Intern Med}. 2017;167(4):268-274. doi:10.7326/M16-2607
+\end{enumerate}
+
+\end{document}

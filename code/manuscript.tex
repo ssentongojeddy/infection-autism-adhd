@@ -1,0 +1,490 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{0233}{\ensuremath{\bar{y}}}
+\DeclareUnicodeCharacter{221A}{\ensuremath{\surd}}
+\DeclareUnicodeCharacter{03A3}{\ensuremath{\Sigma}}
+\DeclareUnicodeCharacter{2192}{\ensuremath{\rightarrow}}
+\DeclareUnicodeCharacter{2265}{\ensuremath{\geq}}
+\DeclareUnicodeCharacter{2211}{\ensuremath{\sum}}
+\DeclareUnicodeCharacter{2003}{ }
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+\DeclareUnicodeCharacter{03A6}{\ensuremath{\Phi}}
+\DeclareUnicodeCharacter{2264}{\ensuremath{\leq}}
+\DeclareUnicodeCharacter{2265}{\ensuremath{\geq}}
+\DeclareUnicodeCharacter{00D7}{\ensuremath{\times}}
+\DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}
+\DeclareUnicodeCharacter{03B2}{\ensuremath{\beta}}
+\DeclareUnicodeCharacter{03C4}{\ensuremath{\tau}}
+\DeclareUnicodeCharacter{03C7}{\ensuremath{\chi}}
+\DeclareUnicodeCharacter{0302}{}
+\DeclareUnicodeCharacter{0304}{}
+\DeclareUnicodeCharacter{00B7}{\ensuremath{\cdot}}
+\DeclareUnicodeCharacter{2032}{\ensuremath{'}}
+\usepackage{textcomp}
+\usepackage{graphicx,booktabs,longtable,array,calc,float,xcolor,setspace,ragged2e}\usepackage[expansion=false]{microtype}
+\usepackage[skins]{tcolorbox}
+\usepackage[font=small,labelformat=empty]{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{1.4em}{0.6em}
+\titlespacing*{\subsection}{0pt}{1.1em}{0.4em}
+\setstretch{1.25}
+\setlength{\parskip}{0.35em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\passthrough}[1]{#1}
+\def\real#1{#1}
+\begin{document}
+\begin{center}
+{\LARGE Early-Life Infections and Later Autism and Attention-Deficit/Hyperactivity Disorder\par}\vspace{1.2em}
+{\large Anna E. Ssentongo, DrPH, MPH\textsuperscript{1}; Paddy Ssentongo, MD, PhD\textsuperscript{2,3}\par}\vspace{1em}
+{\small\itshape
+\textsuperscript{1}Department of Family Medicine, Penn State College of Medicine, Hershey, Pennsylvania\\[0.3em]
+\textsuperscript{2}Department of Medicine, Division of Infectious Diseases, Penn State Health Milton S. Hershey Medical Center, Hershey, Pennsylvania\\[0.3em]
+\textsuperscript{3}Department of Public Health Sciences, Penn State College of Medicine, Hershey, Pennsylvania\\[0.3em]
+}
+\end{center}
+\vspace{1.5em}
+\noindent\textbf{Corresponding author:} Paddy Ssentongo, MD, PhD, Department of Medicine, Division of Infectious Diseases, Penn State Health Milton S. Hershey Medical Center, 500 University Dr, Hershey, PA 17033
+(pssentongo@pennstatehealth.psu.edu).\\[0.4em]
+\textbf{Article type:} Original Investigation; cohort study (STROBE).\\[0.4em]
+\textbf{Running title:} Early-Life Infections, Autism, and ADHD.\\[0.4em]
+\textbf{Word counts:} abstract 350; main text 2,991. One table and four figures. Supplement 1 (eMethods, eTables, eFigures).\\[0.4em]
+\textbf{Keywords:} Autism Spectrum Disorder; Attention-Deficit/Hyperactivity Disorder; Cytomegalovirus; Infant Infections; Neurodevelopment; Electronic Health Records.
+
+\newpage
+\begin{center}\textbf{\large Abstract}\end{center}
+\textbf{Importance} Families often ask whether infant infections cause autism or attention-deficit/hyperactivity disorder (ADHD). Prior associations may partly reflect the extra health care contact of
+sick children.
+
+\textbf{Objective} To compare associations of 21 infections and conditions with later autism and ADHD among infants with equal routine care.
+
+\textbf{Design, Setting, and Participants} This cohort study used electronic health records from the TriNetX Global Collaborative Network. All infants had a well-child visit before age 2 years.
+Exposed infants were matched 1:1 to unexposed infants on 27 covariates by propensity score. Diaper dermatitis served as a benign reference exposure.
+
+\textbf{Exposures} First diagnosis before age 2 years of 1 of 22 conditions, including cytomegalovirus (CMV) disease, bacterial meningitis, respiratory syncytial virus, and COVID-19.
+
+\textbf{Main Outcomes and Measures} New autism and ADHD diagnoses from 1 day to 9 years after the index date, analyzed with Cox models. Secondary outcomes were speech-language disorder, intellectual
+disability, cerebral palsy, epilepsy, and sensorineural hearing loss; arm fracture was a negative-control outcome.
+
+\textbf{Results} The source population included about 3.2 million infants with well-child care (48.5\% female; 50.3\% White, 18.3\% Black, and 20.1\% Hispanic), yielding 1,736,035 matched pairs across
+22 comparisons. CMV disease had the strongest autism association of any condition (8.0\% vs 5.2\%; hazard ratio {[}HR{]}, 1.45; 95\% CI, 1.07-1.96; false discovery rate \emph{q} = .03), which
+persisted after calibration (HR, 1.38; 95\% CI, 1.02-1.86). The COVID-19 association (HR, 1.22; 95\% CI, 1.16-1.28) persisted in a same-era analysis, as did an equally elevated negative control. Other
+infections had autism HRs from 0.77 to 1.18. The reference condition had an ADHD HR of 1.36 (95\% CI, 1.33-1.39); after calibration, no condition had an ADHD 95\% CI above 1. Invasive central nervous
+system infections were associated with epilepsy (pooled HR, 3.76; 95\% CI, 2.54-5.55) and CMV disease with hearing loss (HR, 5.10; 95\% CI, 3.67-7.09).
+
+\textbf{Conclusions and Relevance} In this cohort study, CMV disease was the only early-life infection associated with later autism without evidence of bias, and no infection was associated with ADHD
+beyond a benign condition. These findings may reassure families about common infections and support surveillance after infant CMV disease.
+
+\newpage
+\begin{tcolorbox}[enhanced,colback=white,colframe=black,boxrule=0.6pt,arc=0pt,left=8pt,right=8pt,top=6pt,bottom=6pt,title={\textbf{Key Points}},coltitle=black,colbacktitle=white,attach title to upper,after title={\par\smallskip}]
+\textbf{Question} Is infection before age 2 years associated with later autism or attention-deficit/hyperactivity disorder (ADHD) when exposed and unexposed infants have equal routine care?
+
+\textbf{Findings} In 22 propensity-matched comparisons (1,736,035 matched pairs) of infants who all had well-child care, cytomegalovirus (CMV) disease was the only infection associated with autism
+without signs of bias (28 additional diagnoses per 1,000 children). No infection was associated with ADHD beyond a benign reference condition.
+
+\textbf{Meaning} Common infant infections were not associated with autism or ADHD beyond a benign condition; infant CMV disease may warrant developmental surveillance.
+\end{tcolorbox}
+\newpage
+\hypertarget{introduction}{%
+\section*{Introduction}\label{introduction}}
+
+Autism spectrum disorder and attention-deficit/hyperactivity disorder (ADHD) are the most common neurodevelopmental diagnoses of childhood. About 1 in 31 US children aged 8 years has been identified
+with autism,\textsuperscript{1} and about 1 in 9 US children has received an ADHD diagnosis.\textsuperscript{2} Both conditions are highly heritable,\textsuperscript{3,4} but early environmental
+exposures are also studied, and infection is among the most common.
+
+Maternal infection and immune activation during pregnancy have been associated with autism.\textsuperscript{5-8} Registry studies have also reported that children treated for infections have more
+later mental disorders, including autism and ADHD,\textsuperscript{9-12} and a recent study mapped psychiatric risks after infections across body systems.\textsuperscript{13} However, these
+associations are usually small, appear for almost every infection type, and increase with the number of health care contacts. This pattern is expected if part of the association reflects detection: a
+child who sees clinicians often has more chances for a developmental concern to be noticed and coded.\textsuperscript{14,15}
+
+One infection has a stronger biological case. Congenital cytomegalovirus (CMV) is the most common congenital infection, affecting about 0.7\% of newborns in countries with universal screening, and a
+leading nongenetic cause of hearing loss and developmental disability.\textsuperscript{16-18} Clinical series and a meta-analysis have suggested an excess of autism among children with congenital
+CMV.\textsuperscript{19-22} As newborn CMV screening expands,\textsuperscript{23-25} families and clinicians need to know which outcomes to monitor.
+
+We therefore compared 21 early-life infections and conditions side by side with identical methods. To reduce detection bias, every exposed and control infant had a well-child visit before age 2 years.
+To measure remaining bias, we used diaper dermatitis as a benign reference exposure and arm fracture as a negative-control outcome.\textsuperscript{26} We expected CMV to serve as a positive control.
+
+\hypertarget{methods}{%
+\section*{Methods}\label{methods}}
+
+\hypertarget{data-source}{%
+\subsection*{Data Source}\label{data-source}}
+
+We used the TriNetX Global Collaborative Network, a federated network of deidentified electronic health records from health care organizations, mostly in the US.\textsuperscript{27} Similar designs
+have been used to study neuropsychiatric outcomes after infection.\textsuperscript{13,28} TriNetX returns only aggregate results and reports counts of 10 or fewer as 10. Because data were
+deidentified, the study was exempt from institutional review board review and informed consent {[}authors to confirm local determination{]}. We followed the STROBE reporting
+guideline.\textsuperscript{29}
+
+\hypertarget{population-exposures-and-controls}{%
+\subsection*{Population, Exposures, and Controls}\label{population-exposures-and-controls}}
+
+All infants had at least 1 newborn, infant, or child health examination (\emph{International Statistical Classification of Diseases, Tenth Revision, Clinical Modification} {[}ICD-10-CM{]} Z00.1)
+before age 2 years (age 0 or 1 year in completed years) (Figure 1). Controls were identified through this visit and were therefore in routine care by definition. Requiring the same visit in exposed
+infants ensured that both groups had similar opportunities for developmental concerns to be recognized.
+
+Each of 22 exposure cohorts comprised infants with a first diagnosis of the condition before age 2 years; the index date was that diagnosis. Conditions were chosen before analysis to span severity and
+organ systems (codes in eTable 1 in Supplement 1): CMV disease (B25); invasive central nervous system (CNS) infection (bacterial meningitis; viral meningitis or encephalitis); invasive systemic
+infection (postneonatal sepsis; urinary tract infection; osteomyelitis or septic arthritis); respiratory infection (respiratory syncytial virus {[}RSV{]}, influenza, COVID-19, pneumonia, pertussis);
+mucocutaneous, enteric, and exanthematous infection (herpes simplex virus, enterovirus, viral gastroenteritis, roseola, varicella, and hand, foot, and mouth disease); noninfectious conditions
+(Kawasaki disease, febrile seizure, atopic dermatitis, iron-deficiency anemia); and diaper dermatitis (L22) as the benign reference exposure. TriNetX does not allow the congenital CMV code (P35.1) to
+define an analysis cohort, so B25 includes congenital and early postnatal CMV disease; P35.1 could, however, be counted to describe the overlap. Neonatal sepsis and neonatal jaundice were planned but
+restricted.
+
+For each comparison, controls were infants with a well-child visit before age 2 years and none of that comparison's exposure codes; their index date was the well-child visit.
+
+\hypertarget{outcomes}{%
+\subsection*{Outcomes}\label{outcomes}}
+
+Primary outcomes were autism spectrum disorder (F84.0, F84.5, F84.8, F84.9) and ADHD (F90). Secondary outcomes were speech-language disorder (F80), intellectual disability (F70-F79), cerebral palsy
+(G80), epilepsy (G40), and sensorineural hearing loss (H90.3-H90.5). Arm fracture (S42, S52) was a negative-control outcome, which infection should not cause but which reflects care-seeking and
+follow-up.\textsuperscript{26} Outcomes were counted from 1 day to 9 years after the index date. Children with the outcome on or before the index date were excluded from that outcome's analysis.
+
+\hypertarget{covariates}{%
+\subsection*{Covariates}\label{covariates}}
+
+All comparisons used the same 27 prespecified covariates (codes in eTable 2 in Supplement 1), assessed at any time up to the index date: current age, age at index, sex, ethnicity, and race (8
+variables); 11 perinatal and congenital diagnosis groups, including short gestation and low birth weight, CNS and heart malformations, chromosomal abnormalities, and immune disorders; 6
+early-childhood diagnosis groups (developmental delay, feeding symptoms, upper respiratory infection, asthma, and 2 otitis media groups); family history of mental and behavioral disorders; and
+systemic antibiotic use.
+
+\hypertarget{statistical-analysis}{%
+\subsection*{Statistical Analysis}\label{statistical-analysis}}
+
+Baseline characteristics were summarized as mean (SD) or number (percentage). Balance was measured by the absolute standardized mean difference (SMD), with values below 0.10 indicating good
+balance.\textsuperscript{30}
+
+For each comparison, the propensity score (the probability of being in the exposed cohort given the 27 covariates) was estimated by logistic regression with all covariates entered as main effects.
+Infants were matched 1:1 by greedy nearest-neighbor matching without replacement, with a caliper of 0.1 pooled SD of the propensity score; TriNetX randomizes record order before matching so that
+results do not depend on how records are sorted.\textsuperscript{30} Unmatched infants were excluded. Matching was performed separately for each comparison, so each comparison had its own matched
+controls, and a control infant could contribute to more than 1 comparison. For each outcome, children with that outcome on or before the index date were then removed from both matched groups, so the
+number at risk differs slightly by outcome. Covariate balance was examined before and after matching; for the CMV comparison we also report 12 variables not in the model.
+
+Within each matched cohort, HRs and 95\% CIs were estimated with Cox proportional hazards models with exposure as the only term, since confounding was handled by matching. Follow-up ended at the
+outcome, the last recorded visit, or 9 years. Kaplan-Meier curves were compared with log-rank tests. Because proportionality tests were not extracted for all 173 estimable models (22 comparisons × 8
+outcomes, less 3 with suppressed counts), each HR should be read as an average over follow-up. We report events, cumulative risk, and absolute risk difference per 1,000 children. Two-sided \emph{P}
+values were recovered from each HR and CI as \emph{P} = 2{[}1 − Φ(\textbar ln HR\textbar/SE){]}, with SE = (ln upper − ln lower)/3.92.
+
+We controlled the false discovery rate (FDR) with the Benjamini-Hochberg method across all 144 estimable condition-outcome tests.\textsuperscript{31} Diaper dermatitis is common, mild, and not
+plausibly neurotoxic, but it marks an infant who was brought to a clinician for a minor problem; its HR therefore estimates the bias left after matching. To quantify this residual care-contact bias,
+we computed a calibrated HR for each condition and outcome as its HR divided by the diaper dermatitis HR for the same outcome, with the log-scale variances summed (a conservative choice, because the 2
+estimates share some controls). A calibrated HR above 1 indicates risk beyond that of a benign sick visit. Within prespecified condition groups, log HRs were pooled with DerSimonian-Laird
+random-effects models, with heterogeneity summarized by \emph{I}\textsuperscript{2}; CMV was not pooled. E-values quantified the strength of unmeasured confounding needed to explain each
+association.\textsuperscript{32} In sensitivity analyses, 18 conditions were reanalyzed without the well-child requirement in exposed infants, and the COVID-19 and diaper dermatitis comparisons were
+repeated among children born from late 2019 onward (current age 0-6 years), so that all index dates fell in the pandemic era. Formulas and further details are given in eMethods in Supplement 1.
+Two-sided \emph{q} \textless{} .05 was considered significant. Analyses used the TriNetX platform and Python version 3.13 (SciPy) and were performed in October 2026.
+
+\hypertarget{results}{%
+\section*{Results}\label{results}}
+
+\hypertarget{cohorts}{%
+\subsection*{Cohorts}\label{cohorts}}
+
+\begin{figure}[!htbp]\centering\includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{/tmp/claude-0/-home-claude/1e37972c-6107-52a0-86b9-b3cd81bfbeeb/scratchpad/jama/figs/Figure1_study_design.pdf}\caption*{\textbf{Figure 1. Study Design.} All infants had a well-child visit (ICD-10-CM Z00.1) before age 2 years. Each exposure cohort was matched 1:1 to its own control cohort on 27 covariates. The source population size is approximate
+(exposed plus eligible controls in each comparison). Exposed and eligible control counts are from the cohort queries at the time of analysis; an infant can appear in more than 1 exposure cohort, so
+the summed exposed count exceeds the number of unique infants. ADHD indicates attention-deficit/hyperactivity disorder; CMV, cytomegalovirus; FDR, false discovery rate; ID, intellectual disability;
+SD, standard deviation; SNHL, sensorineural hearing loss.}\end{figure}
+
+{\footnotesize\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.08}\setstretch{1.0}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.29\textwidth}>{\raggedleft\arraybackslash}p{0.1\textwidth}>{\raggedleft\arraybackslash}p{0.165\textwidth}>{\raggedleft\arraybackslash}p{0.055\textwidth}>{\raggedleft\arraybackslash}p{0.1\textwidth}>{\raggedleft\arraybackslash}p{0.1\textwidth}>{\raggedleft\arraybackslash}p{0.055\textwidth}@{}}
+\caption*{\normalsize\textbf{Table 1. Baseline Characteristics of Infants With CMV Disease and Well-Child Controls Before and After Propensity Score Matching}}\\
+\toprule
+ & \multicolumn{3}{c}{Before matching} & \multicolumn{3}{c}{After matching}\\
+\cmidrule(lr){2-4}\cmidrule(l){5-7}
+Characteristic & CMV (n = 1,347) & Controls (n = 3,090,897) & SMD & CMV (n = 1,345) & Controls (n = 1,345) & SMD\\
+\midrule\endhead
+Current age, mean (SD), y & 6.66 (4.47) & 7.45 (4.81) & 0.17 & 6.66 (4.48) & 6.65 (4.54) & 0.00\\
+Age at index, mean (SD), y & 0.18 (0.38) & 0.16 (0.36) & 0.06 & 0.18 (0.38) & 0.18 (0.39) & 0.02\\
+Male & 747 (55.5) & 1,581,797 (51.2) & 0.09 & 745 (55.4) & 765 (56.9) & 0.03\\
+Female\textsuperscript{a} & 597 (44.3) & 1,500,492 (48.5) & 0.08 & 597 (44.4) & 579 (43.0) & 0.03\\
+Hispanic or Latino & 367 (27.2) & 620,299 (20.1) & 0.17 & 366 (27.2) & 351 (26.1) & 0.03\\
+Not Hispanic or Latino & 786 (58.4) & 1,748,790 (56.6) & 0.04 & 785 (58.4) & 805 (59.9) & 0.03\\
+Unknown ethnicity\textsuperscript{a} & 194 (14.4) & 721,808 (23.4) & 0.23 & 194 (14.4) & 189 (14.1) & 0.01\\
+White & 564 (41.9) & 1,554,000 (50.3) & 0.17 & 563 (41.9) & 569 (42.3) & 0.01\\
+Black or African American & 343 (25.5) & 565,742 (18.3) & 0.17 & 343 (25.5) & 354 (26.3) & 0.02\\
+Asian & 102 (7.6) & 140,522 (4.5) & 0.13 & 102 (7.6) & 103 (7.7) & 0.00\\
+Native Hawaiian or Other Pacific Islander\textsuperscript{a} & 31 (2.3) & 24,433 (0.8) & 0.12 & 31 (2.3) & $\leq$10 (0.7) & 0.13\\
+American Indian or Alaska Native\textsuperscript{a} & 11 (0.8) & 18,197 (0.6) & 0.03 & 11 (0.8) & $\leq$10 (0.7) & 0.01\\
+Other race\textsuperscript{a} & 112 (8.3) & 243,510 (7.9) & 0.02 & 112 (8.3) & 138 (10.3) & 0.07\\
+Unknown race\textsuperscript{a} & 184 (13.7) & 544,493 (17.6) & 0.11 & 183 (13.6) & 164 (12.2) & 0.04\\
+Short gestation/low birth weight (P07) & 364 (27.0) & 107,707 (3.5) & 0.69 & 362 (26.9) & 437 (32.5) & 0.12\\
+Slow fetal growth/fetal malnutrition (P05) & 115 (8.5) & 14,743 (0.5) & 0.40 & 113 (8.4) & 99 (7.4) & 0.04\\
+Newborn affected by maternal factors or delivery complications (P00-P04) & 80 (5.9) & 56,212 (1.8) & 0.21 & 80 (5.9) & 102 (7.6) & 0.07\\
+Birth trauma (P10-P15) & $\leq$10 (0.7) & 9,473 (0.3) & 0.06 & $\leq$10 (0.7) & 15 (1.1) & 0.04\\
+Respiratory distress of newborn (P22) & 106 (7.9) & 15,036 (0.5) & 0.38 & 106 (7.9) & 105 (7.8) & 0.00\\
+Transitory endocrine/metabolic disorders of newborn (P70-P74) & 108 (8.0) & 12,074 (0.4) & 0.39 & 108 (8.0) & 101 (7.5) & 0.02\\
+Other disturbances of cerebral status of newborn (P91) & 36 (2.7) & 6,218 (0.2) & 0.21 & 36 (2.7) & 33 (2.5) & 0.01\\
+Feeding problems of newborn (P92)\textsuperscript{a} & 163 (12.1) & 63,232 (2.0) & 0.40 & 163 (12.1) & 176 (13.1) & 0.03\\
+Congenital malformations of nervous system (Q00-Q07) & 173 (12.8) & 11,303 (0.4) & 0.52 & 171 (12.7) & 155 (11.5) & 0.04\\
+Congenital malformations of circulatory system (Q20-Q28) & 310 (23.0) & 64,870 (2.1) & 0.67 & 309 (23.0) & 343 (25.5) & 0.06\\
+Cleft lip and palate (Q35-Q37)\textsuperscript{a} & $\leq$10 (0.7) & 4,561 (0.1) & 0.09 & $\leq$10 (0.7) & 15 (1.1) & 0.04\\
+Congenital musculoskeletal malformations (Q65-Q79)\textsuperscript{a} & 135 (10.0) & 105,946 (3.4) & 0.27 & 134 (10.0) & 146 (10.9) & 0.03\\
+Chromosomal abnormalities (Q90-Q99) & 32 (2.4) & 9,512 (0.3) & 0.18 & 31 (2.3) & 36 (2.7) & 0.02\\
+Disorders of the immune mechanism (D80-D89) & 88 (6.5) & 1,958 (0.1) & 0.37 & 86 (6.4) & 49 (3.6) & 0.13\\
+Lack of expected normal physiological development (R62) & 301 (22.3) & 69,705 (2.3) & 0.64 & 300 (22.3) & 308 (22.9) & 0.01\\
+Symptoms concerning food and fluid intake (R63) & 304 (22.6) & 93,265 (3.0) & 0.61 & 303 (22.5) & 300 (22.3) & 0.01\\
+Acute upper respiratory infection (J06) & 197 (14.6) & 199,340 (6.4) & 0.27 & 195 (14.5) & 202 (15.0) & 0.01\\
+Asthma (J45) & 24 (1.8) & 16,641 (0.5) & 0.12 & 24 (1.8) & 25 (1.9) & 0.01\\
+Nonsuppurative otitis media (H65) & 53 (3.9) & 28,354 (0.9) & 0.20 & 53 (3.9) & 63 (4.7) & 0.04\\
+Suppurative/unspecified otitis media (H66) & 96 (7.1) & 88,933 (2.9) & 0.20 & 95 (7.1) & 100 (7.4) & 0.01\\
+Gastroesophageal reflux disease (K21)\textsuperscript{a} & 190 (14.1) & 156,747 (5.1) & 0.31 & 188 (14.0) & 221 (16.4) & 0.07\\
+Family history of mental and behavioral disorders (Z81) & $\leq$10 (0.7) & 3,633 (0.1) & 0.10 & $\leq$10 (0.7) & $\leq$10 (0.7) & 0.00\\
+Family history of disabilities and chronic diseases (Z82)\textsuperscript{a} & 45 (3.3) & 17,567 (0.6) & 0.20 & 45 (3.3) & 35 (2.6) & 0.04\\
+Well-child visit (any time to index) (Z00.1)\textsuperscript{a} & 756 (56.1) & 3,090,897 (100.0) & 1.25 & 755 (56.1) & 1,345 (100.0) & 1.25\\
+Systemic antibacterials (ATC J01) & 441 (32.7) & 231,558 (7.5) & 0.66 & 440 (32.7) & 499 (37.1) & 0.09\\
+\bottomrule
+\end{longtable}
+Abbreviations: CMV, cytomegalovirus; SMD, absolute standardized mean difference.
+
+Values are No.~(\%) unless otherwise indicated. Before-matching denominators are infants with data in the baseline window as reported by TriNetX (cohort sizes 1,386 and 3,228,691). TriNetX reports
+counts of 10 or fewer as 10; these are shown as ≤10, and SMDs for them are approximate. Race and ethnicity were as recorded in the electronic health record.
+
+\textsuperscript{a} Not included in the propensity score model (shown to assess balance on variables not used for matching). The well-child visit was required for all infants before age 2 years; in
+the exposed group it could occur after the CMV index date, so it appears in the covariate window for only 56.1\%.
+}
+
+The source population included about 3.24 million infants with a well-child visit before age 2 years, from 150 HCOs (94\% in the US); eligible controls in the CMV comparison, which mirror it, were
+48.5\% female, 50.3\% White, 18.3\% Black, 4.5\% Asian, and 20.1\% Hispanic. The 22 comparisons included 1,736,035 matched pairs, from 1,253 pairs (bacterial meningitis) to 409,413 pairs (diaper
+dermatitis) (Figure 2; eTable 1 in Supplement 1). For CMV, 1,386 exposed infants and 3,228,691 controls were eligible and 1,345 pairs were matched. Of infants meeting the CMV definition, 635 of 1,387
+(45.8\%) also carried the congenital CMV code (P35.1). Before matching, infants with CMV were more often born preterm or with low birth weight (27.0\% vs 3.5\%) and more often had congenital heart
+disease (23.0\% vs 2.1\%), CNS malformations (12.8\% vs 0.4\%), and antibiotic exposure (32.7\% vs 7.5\%) (Table 1). After matching, 25 of 27 covariates had SMDs below 0.10; preterm birth or low birth
+weight was more common in controls (26.9\% vs 32.5\%; SMD, 0.12), and immune disorders were more common with CMV (6.4\% vs 3.6\%; SMD, 0.13).
+
+\hypertarget{autism}{%
+\subsection*{Autism}\label{autism}}
+
+CMV disease was associated with autism (Figure 2A). Of 1,344 children with CMV, 108 (8.0\%) were later diagnosed with autism compared with 70 of 1,342 controls (5.2\%) (HR, 1.45; 95\% CI, 1.07-1.96;
+\emph{q} = .03), an excess of 28 diagnoses per 1,000 children (eFigure 2 in Supplement 1). The calibrated HR was 1.38 (95\% CI, 1.02-1.86), and the E-value was 2.25. An earlier CMV analysis without
+the well-child requirement and with fewer covariates gave the same HR (1.45; 95\% CI, 1.21-1.73).
+
+COVID-19 was associated with autism (HR, 1.22; 95\% CI, 1.16-1.28) but also with arm fracture (HR, 1.20). When both groups were restricted to children born from late 2019 onward (87,210 pairs), the
+autism HR was unchanged (1.22; 95\% CI, 1.17-1.29) and arm fracture remained equally elevated (1.24; 95\% CI, 1.15-1.34). Relative to arm fracture, the autism HR was 0.98 (95\% CI, 0.90-1.08), and
+relative to a same-era diaper dermatitis comparison it was 1.07 (95\% CI, 1.01-1.14) (eTable 10 in Supplement 1).
+
+No other condition was associated with autism beyond the reference condition. Estimates for invasive CNS infections were above 1 but imprecise (bacterial meningitis HR, 1.18; 95\% CI, 0.86-1.62; viral
+meningitis or encephalitis HR, 1.09; 95\% CI, 0.76-1.55). Several common infections had HRs below 1, including RSV (0.93), influenza (0.91), pneumonia (0.89), and hand, foot, and mouth disease (0.77).
+Diaper dermatitis had an autism HR of 1.05 (95\% CI, 1.03-1.08), indicating little residual detection bias for autism.
+
+\hypertarget{adhd}{%
+\subsection*{ADHD}\label{adhd}}
+
+\begin{figure}[!htbp]\centering\includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{/tmp/claude-0/-home-claude/1e37972c-6107-52a0-86b9-b3cd81bfbeeb/scratchpad/jama/figs/Figure2_ranked_forest.pdf}\caption*{\textbf{Figure 2. Hazard Ratios for Autism and ADHD After Each Early-Life Condition, Ranked From Highest to Lowest.} A, Autism spectrum disorder. B, Attention-deficit/hyperactivity disorder (ADHD). Squares are sized by cohort size and colored by condition group; lines are 95\% CIs. The solid vertical line marks a
+hazard ratio (HR) of 1; the dashed line and gray band show the HR and 95\% CI for diaper dermatitis, the benign reference exposure. Events are new diagnoses from 1 day to 9 years after the index date.
+CMV indicates cytomegalovirus; HSV, herpes simplex virus; RSV, respiratory syncytial virus; UTI, urinary tract infection.}\end{figure}
+
+For ADHD, diaper dermatitis itself had an HR of 1.36 (95\% CI, 1.33-1.39), showing that ADHD diagnosis remained sensitive to care contact (Figure 2B). Most common infections had small uncalibrated
+ADHD HRs above 1, for example COVID-19 (1.45), viral gastroenteritis (1.21), febrile seizure (1.18), RSV (1.10), hand, foot, and mouth disease (1.07), atopic dermatitis (1.06), influenza (1.05), and
+pneumonia (1.05). Only COVID-19 exceeded the reference HR. After calibration, every condition had an ADHD HR below 1 except COVID-19 (1.07; 95\% CI, 1.00-1.14), and no calibrated 95\% CI was above 1
+(eFigure 1 in Supplement 1). CMV was not associated with ADHD (HR, 0.92; 95\% CI, 0.67-1.26).
+
+\hypertarget{secondary-outcomes}{%
+\subsection*{Secondary Outcomes}\label{secondary-outcomes}}
+
+\begin{figure}[!htbp]\centering\includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{/tmp/claude-0/-home-claude/1e37972c-6107-52a0-86b9-b3cd81bfbeeb/scratchpad/jama/figs/Figure3_heatmap.pdf}\caption*{\textbf{Figure 3. Hazard Ratios for 7 Neurodevelopmental and Neurologic Outcomes and a Negative-Control Outcome.} Each cell shows the hazard ratio comparing children with the condition with matched controls (red, higher risk; blue, lower risk; log scale). Bold values have 95\% CIs above 1; asterisks mark
+Benjamini-Hochberg false discovery rate \emph{q} \textless{} .05 across 144 tests (not computed for the reference exposure or negative-control outcome). NR indicates not reported because of suppressed
+small counts.}\end{figure}
+
+\begin{figure}[!htbp]\centering\includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{/tmp/claude-0/-home-claude/1e37972c-6107-52a0-86b9-b3cd81bfbeeb/scratchpad/jama/figs/Figure4_risk_stratification.pdf}\caption*{\textbf{Figure 4. Risk Stratification by Type of Early-Life Condition.} Random-effects pooled hazard ratios (DerSimonian-Laird) and 95\% CIs by condition group and outcome; cytomegalovirus (CMV) disease is a single exposure. Filled markers indicate a lower 95\% CI limit
+above 1. CNS indicates central nervous system; k, number of conditions pooled.}\end{figure}
+
+Invasive infections were strongly associated with neurologic outcomes (Figures 3 and 4). CMV disease was associated with sensorineural hearing loss (16.0\% vs 3.2\%; HR, 5.10; 95\% CI, 3.67-7.09),
+cerebral palsy (HR, 3.02), intellectual disability (HR, 2.68), and epilepsy (HR, 2.34). Pooled across the 2 invasive CNS infections, HRs were 3.76 (95\% CI, 2.54-5.55) for epilepsy, 3.46 (95\% CI,
+2.28-5.27) for cerebral palsy, and 1.94 (95\% CI, 1.25-3.02) for intellectual disability, but 1.14 (95\% CI, 0.90-1.44) for autism and 0.88 (95\% CI, 0.71-1.09) for ADHD. Postneonatal sepsis was
+associated with epilepsy (HR, 2.07), and febrile seizure with later epilepsy (HR, 8.33). Common infections had at most small associations with severe outcomes (for example, pneumonia and cerebral
+palsy, HR, 1.23; enterovirus and epilepsy, HR, 1.24), and several, along with atopic dermatitis and iron-deficiency anemia, had HRs well below 1 for cerebral palsy and intellectual disability. The
+negative-control outcome was near 1 for CMV (0.86) and CNS infections (pooled, 0.98) and between 1.02 and 1.23 for respiratory, mucocutaneous, and enteric infections.
+
+\hypertarget{sensitivity-analyses}{%
+\subsection*{Sensitivity Analyses}\label{sensitivity-analyses}}
+
+Without the well-child requirement in exposed infants, speech-language HRs fell below 1 for every condition and ADHD HRs for 16 of 18, while epilepsy HRs rose for every condition and cerebral palsy
+and intellectual disability HRs rose for most; hearing loss HRs fell. These shifts are consistent with differences in developmental surveillance (eTable 7 and eFigure 3 in Supplement 1). The
+CMV-autism estimate was unchanged in the earlier analysis. In the same-era analysis, COVID-19 ADHD and speech-language HRs were no higher than those for same-era diaper dermatitis (calibrated HRs,
+0.98 and 0.97). Point-estimate E-values exceeded 8 for febrile seizure and epilepsy (16.1), CMV and hearing loss (9.7), and bacterial meningitis and epilepsy (8.4) (eTable 8 and eFigure 4 in
+Supplement 1).
+
+\hypertarget{discussion}{%
+\section*{Discussion}\label{discussion}}
+
+In this cohort study of 22 early-life conditions among infants who all had well-child care, CMV disease was the only infection associated with later autism without evidence of bias; the COVID-19
+association was accompanied by a positive negative-control outcome. The CMV association was moderate, persisted after calibration against a benign condition, was unchanged in an earlier analysis with
+a different design and covariate set, and occurred alongside the known effects of CMV on hearing, motor, and cognitive development. No infection was associated with ADHD beyond what a benign sick
+visit predicted. Invasive CNS infections were strongly associated with epilepsy, cerebral palsy, and intellectual disability, but not with autism or ADHD.
+
+These results show how strongly infection-neurodevelopment associations depend on the comparison group, which may explain why prior studies found associations for almost every infection
+type.\textsuperscript{9-12} When exposed infants were not required to have routine care, estimates shifted in both directions. When both groups had well-child care, estimates for common infections
+settled near 1. The reference condition made the remaining bias visible: small for autism (HR, 1.05) but substantial for ADHD (HR, 1.36). An infant seen for diaper dermatitis is not at higher
+biological risk of ADHD, so this excess most likely reflects how families use care. Diaper dermatitis is diagnosed almost entirely in primary care offices for a minor complaint, so it marks families
+who bring infants in readily and who stay with a pediatric practice, where developmental concerns are raised and coded over time. Serious infections, by contrast, are often diagnosed in emergency or
+hospital settings. The bias was larger for ADHD than for autism, plausibly because ADHD diagnosis depends more on parent and teacher report and on repeated visits, whereas autism screening is built
+into the well-child schedule that both groups shared. Unmeasured family factors, such as parental education, insurance, and parental ADHD, may also contribute. Infection-ADHD associations smaller than
+this reference should not be interpreted as causal.
+
+The CMV finding fits its biology. CMV infects the developing brain and inner ear and is a leading nongenetic cause of hearing loss and developmental disability.\textsuperscript{16-18} Autism has been
+reported more often than expected in children with congenital CMV.\textsuperscript{19-22} In our data, the autism association was weaker than those with hearing loss, cerebral palsy, and intellectual
+disability. This gradient suggests that CMV causes a spectrum of brain injury of which autism is one expression. Some children with hearing loss or intellectual disability may also have received
+autism diagnoses after more frequent assessment; we could not separate these explanations.
+
+Bacterial meningitis showed the expected neurologic damage, consistent with meta-analyses of its sequelae,\textsuperscript{33} as did sepsis.\textsuperscript{34} Yet its association with autism was
+small and imprecise. Postnatal brain injury from infection therefore does not appear, in general, to lead to autism; the CMV association may reflect prenatal timing or virus-specific effects. The
+febrile seizure-epilepsy association agrees with national cohort data.\textsuperscript{35} The COVID-19 associations are unlikely to reflect calendar time, because they persisted when controls came
+from the same era. Instead, infants with a recorded COVID-19 diagnosis had an equally raised risk of arm fracture, which points to differences in care-seeking, testing, and follow-up between families
+rather than an effect of the virus. A small residual effect cannot be excluded, and prenatal SARS-CoV-2 exposure has been linked to early neurodevelopmental diagnoses in other
+work.\textsuperscript{36} HRs below 1 for mild conditions such as hand, foot, and mouth disease most likely reflect healthy-child selection, since the same children had lower risks of cerebral palsy.
+
+These findings have 2 practical messages. For families, common infant infections, such as RSV, influenza, gastroenteritis, and hand, foot, and mouth disease, were not associated with autism or ADHD
+beyond what a benign sick visit predicted. For clinicians and newborn screening programs, infants with CMV disease had higher risks of autism in addition to hearing loss and motor and cognitive
+disability, which supports structured developmental surveillance, including autism screening.\textsuperscript{23-25} Survivors of meningitis and sepsis need neurologic follow-up.
+
+\hypertarget{strengths-and-limitations}{%
+\subsection*{Strengths and Limitations}\label{strengths-and-limitations}}
+
+Strengths include identical methods across 22 conditions, large matched cohorts, equal routine care in both groups, a benign reference exposure and negative-control outcome to measure bias, correction
+for multiple testing, and replication of known associations (CMV and hearing loss; meningitis and epilepsy).
+
+This study has limitations. First, diagnoses were based on codes, which may be incomplete or misclassified. Second, the congenital CMV code could not define a cohort; fewer than half of the CMV cohort
+(45.8\%) carried it, so the cohort mixes congenital and postnatal disease, and asymptomatic congenital infection was likely missed. Third, residual confounding by unmeasured factors such as
+socioeconomic status, gestational age in weeks, and genetic risk is possible; E-values indicate how strong it would need to be. Fourth, children who leave participating health systems are lost to
+follow-up. Fifth, the network is mostly US-based and lacks geographic and socioeconomic data. Sixth, the CMV and CNS infection cohorts were small. Seventh, TriNetX suppresses small counts. Finally,
+calibration assumes that diaper dermatitis captures the care-contact bias of each condition, which may underestimate bias for conditions with intensive follow-up.
+
+\hypertarget{conclusions}{%
+\section*{Conclusions}\label{conclusions}}
+
+In this cohort study of infants with equal routine care, CMV disease was the only early-life infection associated with later autism without evidence of bias, and no infection was associated with ADHD
+beyond a benign reference condition. These findings may reassure families about common infections and support developmental surveillance, including autism screening, after infant CMV disease.
+
+\newpage
+
+\hypertarget{article-information}{%
+\section*{Article Information}\label{article-information}}
+
+\textbf{Author Contributions:} Drs A. E. Ssentongo and P. Ssentongo had full access to all of the data in the study and take responsibility for the integrity of the data and the accuracy of the data
+analysis. \emph{Concept and design:} Both authors. \emph{Acquisition, analysis, or interpretation of data:} P. Ssentongo. \emph{Drafting of the manuscript:} P. Ssentongo. \emph{Critical review of the
+manuscript for important intellectual content:} Both authors. \emph{Statistical analysis:} A. E. Ssentongo, P. Ssentongo. \emph{Obtained funding:} {[}to be added{]}. \emph{Supervision:} P. Ssentongo.
+
+\textbf{Conflict of Interest Disclosures:} None reported.
+
+\textbf{Funding/Support:} This work was supported by the National Institutes of Health {[}grant number{]} (MIND Study).
+
+\textbf{Role of the Funder/Sponsor:} The funder had no role in the design and conduct of the study; collection, management, analysis, and interpretation of the data; preparation, review, or approval
+of the manuscript; and decision to submit the manuscript for publication.
+
+\textbf{Data Sharing Statement:} Aggregate results, including numbers at risk, event counts, hazard ratios with 95\% CIs, and baseline characteristics, are provided in the article and Supplement 1.
+Patient-level data are held by TriNetX and its participating health care organizations and cannot be shared by the authors; qualified researchers can access the TriNetX Global Collaborative Network
+under a data use agreement with TriNetX, LLC. The cohort definitions, codes, and analysis settings in Supplement 1 allow the analyses to be reproduced. Code for the derived statistics (absolute risks,
+false discovery rate, calibration, random-effects pooling, and E-values) is available from the corresponding author.
+
+\newpage
+\hypertarget{references}{%
+\section*{References}\label{references}}
+
+{\small\setstretch{1.05}\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Shaw KA, Williams S, Patrick ME, et al.~Prevalence and early identification of autism spectrum disorder among children aged 4 and 8 years---Autism and Developmental Disabilities Monitoring Network,
+  16 sites, United States, 2022. \emph{MMWR Surveill Summ}. 2025;74(2):1-22. doi:10.15585/mmwr.ss7402a1
+\item
+  Danielson ML, Claussen AH, Bitsko RH, et al.~ADHD prevalence among U.S. children and adolescents in 2022: diagnosis, severity, co-occurring disorders, and treatment. \emph{J Clin Child Adolesc
+  Psychol}. 2024;53(3):343-360. doi:10.1080/15374416.2024.2335625
+\item
+  Bai D, Yip BHK, Windham GC, et al.~Association of genetic and environmental factors with autism in a 5-country cohort. \emph{JAMA Psychiatry}. 2019;76(10):1035-1043.
+  doi:10.1001/jamapsychiatry.2019.1411
+\item
+  Sandin S, Lichtenstein P, Kuja-Halkola R, Hultman C, Larsson H, Reichenberg A. The heritability of autism spectrum disorder. \emph{JAMA}. 2017;318(12):1182-1184. doi:10.1001/jama.2017.12141
+\item
+  Atladóttir HÓ, Thorsen P, Østergaard L, et al.~Maternal infection requiring hospitalization during pregnancy and autism spectrum disorders. \emph{J Autism Dev Disord}. 2010;40(12):1423-1430.
+  doi:10.1007/s10803-010-1006-y
+\item
+  Lee BK, Magnusson C, Gardner RM, et al.~Maternal hospitalization with infection during pregnancy and risk of autism spectrum disorders. \emph{Brain Behav Immun}. 2015;44:100-105.
+  doi:10.1016/j.bbi.2014.09.001
+\item
+  Jiang HY, Xu LL, Shao L, et al.~Maternal infection during pregnancy and risk of autism spectrum disorders: a systematic review and meta-analysis. \emph{Brain Behav Immun}. 2016;58:165-172.
+  doi:10.1016/j.bbi.2016.06.005
+\item
+  Estes ML, McAllister AK. Maternal immune activation: implications for neuropsychiatric disorders. \emph{Science}. 2016;353(6301):772-777. doi:10.1126/science.aag3194
+\item
+  Köhler-Forsberg O, Petersen L, Gasse C, et al.~A nationwide study in Denmark of the association between treated infections and the subsequent risk of treated mental disorders in children and
+  adolescents. \emph{JAMA Psychiatry}. 2019;76(3):271-279. doi:10.1001/jamapsychiatry.2018.3428
+\item
+  Atladóttir HÓ, Thorsen P, Schendel DE, Østergaard L, Lemcke S, Parner ET. Association of hospitalization for infection in childhood with diagnosis of autism spectrum disorders: a Danish cohort
+  study. \emph{Arch Pediatr Adolesc Med}. 2010;164(5):470-477. doi:10.1001/archpediatrics.2010.9
+\item
+  Karlsson H, Sjöqvist H, Brynge M, Gardner R, Dalman C. Childhood infections and autism spectrum disorders and/or intellectual disability: a register-based cohort study. \emph{J Neurodev Disord}.
+  2022;14(1):12. doi:10.1186/s11689-022-09422-4
+\item
+  Lin MC, Pan YJ, Wu CS, et al.~Prenatal and early childhood infections requiring hospitalization and risk of neurodevelopmental disorders in offspring: a population-based birth cohort study in
+  Taiwan. \emph{Mol Psychiatry}. 2025;30(5):1791-1800. doi:10.1038/s41380-024-02787-z
+\item
+  Taquet M, Oliver P, Mezher A, et al.~Mapping 2-year psychiatric and neurologic risks after infections across body systems and age groups. \emph{JAMA Psychiatry}. 2026;83(9):957-966.
+  doi:10.1001/jamapsychiatry.2026.1904
+\item
+  Shrank WH, Patrick AR, Brookhart MA. Healthy user and related biases in observational studies of preventive interventions: a primer for physicians. \emph{J Gen Intern Med}. 2011;26(5):546-550.
+  doi:10.1007/s11606-010-1609-1
+\item
+  Haut ER, Pronovost PJ. Surveillance bias in outcomes reporting. \emph{JAMA}. 2011;305(23):2462-2463. doi:10.1001/jama.2011.822
+\item
+  Ssentongo P, Hehnly C, Birungi P, et al.~Congenital cytomegalovirus infection burden and epidemiologic risk factors in countries with universal screening: a systematic review and meta-analysis.
+  \emph{JAMA Netw Open}. 2021;4(8):e2120736. doi:10.1001/jamanetworkopen.2021.20736
+\item
+  Kenneson A, Cannon MJ. Review and meta-analysis of the epidemiology of congenital cytomegalovirus (CMV) infection. \emph{Rev Med Virol}. 2007;17(4):253-276. doi:10.1002/rmv.535
+\item
+  Dollard SC, Grosse SD, Ross DS. New estimates of the prevalence of neurological and sensory sequelae and mortality associated with congenital cytomegalovirus infection. \emph{Rev Med Virol}.
+  2007;17(5):355-363. doi:10.1002/rmv.544
+\item
+  Maeyama K, Tomioka K, Nagase H, et al.~Congenital cytomegalovirus infection in children with autism spectrum disorder: systematic review and meta-analysis. \emph{J Autism Dev Disord}.
+  2018;48(5):1483-1491. doi:10.1007/s10803-017-3412-x
+\item
+  Sakamoto A, Moriuchi H, Matsuzaki J, Motoyama K, Moriuchi M. Retrospective diagnosis of congenital cytomegalovirus infection in children with autism spectrum disorder but no other major neurologic
+  deficit. \emph{Brain Dev}. 2015;37(2):200-205. doi:10.1016/j.braindev.2014.03.016
+\item
+  Engman ML, Sundin M, Miniscalco C, et al.~Prenatal acquired cytomegalovirus infection should be considered in children with autism. \emph{Acta Paediatr}. 2015;104(8):792-795. doi:10.1111/apa.13032
+\item
+  Keymeulen A, De Leenheer E, Casaer A, et al.~Neurodevelopmental outcome in children with congenital cytomegalovirus infection: a prospective multicenter cohort study. \emph{Early Hum Dev}.
+  2023;182:105777. doi:10.1016/j.earlhumdev.2023.105777
+\item
+  Fowler KB, McCollister FP, Sabo DL, et al.~A targeted approach for congenital cytomegalovirus screening within newborn hearing screening. \emph{Pediatrics}. 2017;139(2):e20162128.
+  doi:10.1542/peds.2016-2128
+\item
+  Gantt S, Dionne F, Kozak FK, et al.~Cost-effectiveness of universal and targeted newborn screening for congenital cytomegalovirus infection. \emph{JAMA Pediatr}. 2016;170(12):1173-1180.
+  doi:10.1001/jamapediatrics.2016.2016
+\item
+  Kruc RM, Osterholm EA, Holm T, Nestrasil I, Lanzieri TM, Schleiss MR. Cranial ultrasound findings in infants with congenital cytomegalovirus infection in a universal newborn screening study in
+  Minnesota. \emph{J Pediatric Infect Dis Soc}. 2024;13(8):413-420. doi:10.1093/jpids/piae059
+\item
+  Lipsitch M, Tchetgen Tchetgen E, Cohen T. Negative controls: a tool for detecting confounding and bias in observational studies. \emph{Epidemiology}. 2010;21(3):383-388.
+  doi:10.1097/EDE.0b013e3181d61eeb
+\item
+  Palchuk MB, London JW, Perez-Rey D, et al.~A global federated real-world data and analytics platform for research. \emph{JAMIA Open}. 2023;6(2):ooad035. doi:10.1093/jamiaopen/ooad035
+\item
+  Taquet M, Geddes JR, Husain M, Luciano S, Harrison PJ. 6-month neurological and psychiatric outcomes in 236 379 survivors of COVID-19: a retrospective cohort study using electronic health records.
+  \emph{Lancet Psychiatry}. 2021;8(5):416-427. doi:10.1016/S2215-0366(21)00084-5
+\item
+  von Elm E, Altman DG, Egger M, Pocock SJ, Gøtzsche PC, Vandenbroucke JP. The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) statement: guidelines for reporting
+  observational studies. \emph{Lancet}. 2007;370(9596):1453-1457. doi:10.1016/S0140-6736(07)61602-X
+\item
+  Austin PC. An introduction to propensity score methods for reducing the effects of confounding in observational studies. \emph{Multivariate Behav Res}. 2011;46(3):399-424.
+  doi:10.1080/00273171.2011.568786
+\item
+  Benjamini Y, Hochberg Y. Controlling the false discovery rate: a practical and powerful approach to multiple testing. \emph{J R Stat Soc Series B Stat Methodol}. 1995;57(1):289-300.
+  doi:10.1111/j.2517-6161.1995.tb02031.x
+\item
+  VanderWeele TJ, Ding P. Sensitivity analysis in observational research: introducing the E-value. \emph{Ann Intern Med}. 2017;167(4):268-274. doi:10.7326/M16-2607
+\item
+  Edmond K, Clark A, Korczak VS, Sanderson C, Griffiths UK, Rudan I. Global and regional risk of disabling sequelae from bacterial meningitis: a systematic review and meta-analysis. \emph{Lancet
+  Infect Dis}. 2010;10(5):317-328. doi:10.1016/S1473-3099(10)70048-7
+\item
+  Alshaikh B, Yusuf K, Sauve R. Neurodevelopmental outcomes of very low birth weight infants with neonatal sepsis: systematic review and meta-analysis. \emph{J Perinatol}. 2013;33(7):558-564.
+  doi:10.1038/jp.2012.167
+\item
+  Dreier JW, Li J, Sun Y, Christensen J. Evaluation of long-term risk of epilepsy, psychiatric disorders, and mortality among children with recurrent febrile seizures: a national cohort study in
+  Denmark. \emph{JAMA Pediatr}. 2019;173(12):1164-1170. doi:10.1001/jamapediatrics.2019.3343
+\item
+  Edlow AG, Castro VM, Shook LL, Kaimal AJ, Perlis RH. Neurodevelopmental outcomes at 1 year in infants of mothers who tested positive for SARS-CoV-2 during pregnancy. \emph{JAMA Netw Open}.
+  2022;5(6):e2215787. doi:10.1001/jamanetworkopen.2022.15787
+\end{enumerate}}
+
+\end{document}

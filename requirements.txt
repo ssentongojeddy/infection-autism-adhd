@@ -1,0 +1,4 @@
+# Python 3.13
+numpy==2.3.4
+scipy==1.18.0
+matplotlib==3.10.7
